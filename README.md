@@ -1,4 +1,5 @@
 # Citera — Evaluation-Driven RAG over Diffusion-Model Papers
+**🔗 [Live Demo](https://huggingface.co/spaces/pranjal25r/citera)**
 
 A retrieval-augmented question-answering system over **~304 arXiv papers on diffusion models**, built to *measure and improve* retrieval quality rather than just ship a chatbot. Every answer is grounded in retrieved papers and cited; the system **abstains when it lacks evidence** instead of hallucinating; and retrieval strategies are **benchmarked with an LLM-as-judge harness**.
 
