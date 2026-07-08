@@ -49,6 +49,17 @@ question ──► embed ──► retrieve top-k ──►(optional cross-encod
 
 ---
 
+## Vector store comparison: FAISS vs ChromaDB
+
+Ran the same 304-paper embedding set through both backends (identical embeddings — the only variable is the store):
+
+| Backend | Index type | Latency (ms/query) | Top-4 agreement |
+|---|---|---:|---:|
+| FAISS | IndexFlatIP (exact) | 0.008 | — |
+| ChromaDB | HNSW approx (cosine) | 0.321 | 100% |
+
+**Takeaway:** at this corpus scale the two return identical results, so the choice is latency vs. features. FAISS's exact search is ~40× faster with a lighter footprint (chosen for the deployed demo); ChromaDB trades that for persistence, metadata filtering, and a managed interface that pay off as a corpus scales toward millions of vectors.
+
 ## Design decisions
 
 - **Abstracts over full text** — dense, self-contained, and fast to iterate on; isolates retrieval quality from PDF-parsing noise.

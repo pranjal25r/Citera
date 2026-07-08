@@ -1,0 +1,7 @@
+{
+  "corpus_size": 304,
+  "top_k": 4,
+  "faiss_latency_ms": 0.0081,
+  "chroma_latency_ms": 0.3213,
+  "mean_overlap_at_k": 1.0
+}
