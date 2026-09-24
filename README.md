@@ -1,4 +1,4 @@
-# Citera — Evaluation-Driven RAG over Diffusion-Model Papers
+# Citera Evaluation-Driven RAG over Diffusion-Model Papers
 **🔗 [Live Demo](https://huggingface.co/spaces/pranjal25r/citera)**
 
 A retrieval-augmented question-answering system over **~304 arXiv papers on diffusion models**, built to *measure and improve* retrieval quality rather than just ship a chatbot. Every answer is grounded in retrieved papers and cited; the system **abstains when it lacks evidence** instead of hallucinating; and retrieval strategies are **benchmarked with an LLM-as-judge harness**.
@@ -28,21 +28,21 @@ question ──► embed ──► retrieve top-k ──►(optional cross-encod
                                               LLM-as-judge ◄── (question, answer, contexts)
 ```
 
-1. **Ingestion** — pull diffusion-model papers from the arXiv API across ~10 subtopic queries (DDPM, score-based models, classifier-free guidance, latent diffusion, DiT, DDIM, text-to-image, …), deduplicate, and store abstracts. Abstracts (not full PDFs) keep the corpus clean and dense so retrieval quality isn't fighting messy PDF parsing.
-2. **Indexing** — embed each abstract with `all-MiniLM-L6-v2`, normalize, and store in a FAISS inner-product index (normalized vectors + inner product = cosine similarity).
-3. **Retrieval** — two strategies are benchmarked:
+1. **Ingestion** pull diffusion-model papers from the arXiv API across ~10 subtopic queries (DDPM, score-based models, classifier-free guidance, latent diffusion, DiT, DDIM, text-to-image, …), deduplicate, and store abstracts. Abstracts (not full PDFs) keep the corpus clean and dense so retrieval quality isn't fighting messy PDF parsing.
+2. **Indexing** embed each abstract with `all-MiniLM-L6-v2`, normalize, and store in a FAISS inner-product index (normalized vectors + inner product = cosine similarity).
+3. **Retrieval** two strategies are benchmarked:
    - *Naive dense*: take the top-4 by embedding similarity.
    - *Reranked*: cast a wider net (top-20 by embedding), then a cross-encoder (`ms-marco-MiniLM-L-6-v2`) re-scores each (question, passage) pair and keeps the best 4.
-4. **Generation** — the LLM (Llama-3.3-70B via Groq) answers using **only** the retrieved context, cites sources by number, and is instructed to refuse — "I don't have enough information to answer that" — when the context doesn't support an answer.
-5. **Evaluation** — an LLM-as-judge harness scores every answer on **faithfulness** (are all claims supported by the context?), **answer relevancy** (does it address the question?), and **context precision** (what fraction of retrieved chunks are relevant?), plus **abstention accuracy** on out-of-domain questions.
+4. **Generation** the LLM (Llama-3.3-70B via Groq) answers using **only** the retrieved context, cites sources by number, and is instructed to refuse "I don't have enough information to answer that" when the context doesn't support an answer.
+5. **Evaluation** an LLM-as-judge harness scores every answer on **faithfulness** (are all claims supported by the context?), **answer relevancy** (does it address the question?), and **context precision** (what fraction of retrieved chunks are relevant?), plus **abstention accuracy** on out-of-domain questions.
 
 ---
 
 ## Key findings
 
-**1. Reranking's value depends on retrieval noise.** On an initial small (~100-paper), tightly on-topic corpus, reranking made almost no difference (context precision 0.45 → 0.46) — dense retrieval already surfaced the few relevant papers, leaving nothing to reorder. Only after scaling the corpus to ~304 papers, which introduced realistic near-miss noise, did reranking demonstrate clear value (0.25 → 0.375). The lesson: a reranker earns its keep when the first-stage retriever makes ranking errors, which happens in larger, noisier corpora — not in toy ones.
+**1. Reranking's value depends on retrieval noise.** On an initial small (~100-paper), tightly on-topic corpus, reranking made almost no difference (context precision 0.45 → 0.46) dense retrieval already surfaced the few relevant papers, leaving nothing to reorder. Only after scaling the corpus to ~304 papers, which introduced realistic near-miss noise, did reranking demonstrate clear value (0.25 → 0.375). The lesson: a reranker earns its keep when the first-stage retriever makes ranking errors, which happens in larger, noisier corpora not in toy ones.
 
-**2. Better retrieval improves answer faithfulness.** Cleaner context from reranking didn't just raise precision — it lifted faithfulness (0.933 → 0.950), because the generator had fewer irrelevant chunks to be misled by.
+**2. Better retrieval improves answer faithfulness.** Cleaner context from reranking didn't just raise precision it lifted faithfulness (0.933 → 0.950), because the generator had fewer irrelevant chunks to be misled by.
 
 **3. The system stays reliable under imperfect retrieval.** Even at a modest 0.375 context precision, faithfulness held at 0.95 and abstention at 100%. Grounding constraints plus abstention make the system robust to noisy retrieval rather than brittle.
 
@@ -52,31 +52,31 @@ question ──► embed ──► retrieve top-k ──►(optional cross-encod
 
 ## Vector store comparison: FAISS vs ChromaDB
 
-Ran the same 304-paper embedding set through both backends (identical embeddings — the only variable is the store):
+Ran the same 304-paper embedding set through both backends (identical embeddings the only variable is the store):
 
 | Backend | Index type | Latency (ms/query) | Top-4 agreement |
 |---|---|---:|---:|
-| FAISS | IndexFlatIP (exact) | 0.008 | — |
+| FAISS | IndexFlatIP (exact) | 0.008 | |
 | ChromaDB | HNSW approx (cosine) | 0.321 | 100% |
 
 **Takeaway:** at this corpus scale the two return identical results, so the choice is latency vs. features. FAISS's exact search is ~40× faster with a lighter footprint (chosen for the deployed demo); ChromaDB trades that for persistence, metadata filtering, and a managed interface that pay off as a corpus scales toward millions of vectors.
 
 ## Design decisions
 
-- **Abstracts over full text** — dense, self-contained, and fast to iterate on; isolates retrieval quality from PDF-parsing noise.
-- **Cosine via normalized inner product** — simple, exact search appropriate for a few-hundred-document corpus (no approximate index needed).
-- **Wide-net retrieve → rerank** — the reranker can only promote relevant papers it's given, so the first stage fetches 20 candidates before narrowing to 4.
-- **Abstention as a first-class behavior** — currently enforced via grounding prompt; a confidence-based version using retrieval scores is the natural next step.
-- **Custom LLM-as-judge instead of a library** — implemented faithfulness / relevancy / context-precision using their standard definitions, on the same inference stack as the system. This avoids dependency churn and, more importantly, makes the metric fully explainable end to end.
+- **Abstracts over full text** dense, self-contained, and fast to iterate on; isolates retrieval quality from PDF-parsing noise.
+- **Cosine via normalized inner product** simple, exact search appropriate for a few-hundred-document corpus (no approximate index needed).
+- **Wide-net retrieve → rerank** the reranker can only promote relevant papers it's given, so the first stage fetches 20 candidates before narrowing to 4.
+- **Abstention as a first-class behavior** currently enforced via grounding prompt; a confidence-based version using retrieval scores is the natural next step.
+- **Custom LLM-as-judge instead of a library** implemented faithfulness / relevancy / context-precision using their standard definitions, on the same inference stack as the system. This avoids dependency churn and, more importantly, makes the metric fully explainable end to end.
 
 ---
 
 ## What I'd do next
 
-- **Confidence-based abstention** — trigger refusal from retrieval-score thresholds, not just prompt instructions.
-- **Hybrid retrieval** — fuse BM25 (keyword) with dense embeddings; exact-term matching often helps on technical jargon.
-- **Stronger / independent judge** — cross-validate the LLM-as-judge scores against the RAGAS library and a different judge model to reduce self-evaluation bias.
-- **Full-text chunking** — index paper bodies, not just abstracts, with proper chunking and overlap.
+- **Confidence-based abstention** trigger refusal from retrieval-score thresholds, not just prompt instructions.
+- **Hybrid retrieval** fuse BM25 (keyword) with dense embeddings; exact-term matching often helps on technical jargon.
+- **Stronger / independent judge** cross-validate the LLM-as-judge scores against the RAGAS library and a different judge model to reduce self-evaluation bias.
+- **Full-text chunking** index paper bodies, not just abstracts, with proper chunking and overlap.
 
 ---
 
