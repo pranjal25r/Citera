@@ -7,6 +7,8 @@ A retrieval-augmented question-answering system over **~304 arXiv papers on diff
 
 ## Headline result
 
+*The evaluation results below were produced with Llama-3.3-70B, which Groq retired in August 2026; they have not been re-run on gpt-oss-120b.*
+
 On a deliberately scaled, noisy corpus, **cross-encoder reranking improved retrieval context precision by 50%** (0.25 → 0.375) while *also* lifting answer faithfulness, with perfect abstention on out-of-domain questions maintained throughout.
 
 | Config | Faithfulness | Answer Relevancy | Context Precision | Abstention Acc. |
@@ -33,7 +35,7 @@ question ──► embed ──► retrieve top-k ──►(optional cross-encod
 3. **Retrieval** two strategies are benchmarked:
    - *Naive dense*: take the top-4 by embedding similarity.
    - *Reranked*: cast a wider net (top-20 by embedding), then a cross-encoder (`ms-marco-MiniLM-L-6-v2`) re-scores each (question, passage) pair and keeps the best 4.
-4. **Generation** the LLM (Llama-3.3-70B via Groq) answers using **only** the retrieved context, cites sources by number, and is instructed to refuse "I don't have enough information to answer that" when the context doesn't support an answer.
+4. **Generation** the LLM (gpt-oss-120b via Groq) answers using **only** the retrieved context, cites sources by number, and is instructed to refuse "I don't have enough information to answer that" when the context doesn't support an answer.
 5. **Evaluation** an LLM-as-judge harness scores every answer on **faithfulness** (are all claims supported by the context?), **answer relevancy** (does it address the question?), and **context precision** (what fraction of retrieved chunks are relevant?), plus **abstention accuracy** on out-of-domain questions.
 
 ---
@@ -82,7 +84,7 @@ Ran the same 304-paper embedding set through both backends (identical embeddings
 
 ## Tech stack
 
-Python · FAISS · sentence-transformers (`all-MiniLM-L6-v2`) · cross-encoder (`ms-marco-MiniLM-L-6-v2`) · Groq (Llama-3.3-70B) · arXiv API
+Python · FAISS · sentence-transformers (`all-MiniLM-L6-v2`) · cross-encoder (`ms-marco-MiniLM-L-6-v2`) · Groq (gpt-oss-120b) · arXiv API
 
 ---
 
@@ -104,7 +106,7 @@ Then run the pipeline:
 ```bash
 python3 fetch_papers.py     # pull diffusion papers from arXiv → data/papers.json
 python3 build_index.py      # embed abstracts → FAISS index
-python3 ask.py "what is classifier-free guidance?"   # interactive Q&A
+python3 app.py              # Gradio Q&A demo (pip install -r requirements.txt, export GROQ_API_KEY)
 python3 evaluate.py         # run the naive-vs-reranked ablation
 ```
 
@@ -116,7 +118,7 @@ python3 evaluate.py         # run the naive-vs-reranked ablation
 rag_arxiv/
 ├── fetch_papers.py        # pull diffusion papers from arXiv → data/papers.json
 ├── build_index.py         # embed abstracts → FAISS index
-├── ask.py                 # interactive: retrieve + grounded, cited answer
+├── app.py                 # Gradio demo: retrieve + rerank + grounded, cited answer
 ├── evaluate.py            # ablation harness: naive vs reranked, LLM-as-judge
 ├── eval_questions.json    # in-domain + out-of-domain eval set
 ├── data/                  # papers.json, papers.index

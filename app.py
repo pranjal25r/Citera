@@ -6,7 +6,7 @@ from pathlib import Path
 from sentence_transformers import SentenceTransformer, CrossEncoder
 from groq import Groq
 
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "openai/gpt-oss-120b"
 TOP_K = 4
 FETCH_K = 20
 ABSTAIN_LINE = "I don't have enough information to answer that."
@@ -36,7 +36,10 @@ def generate(question, ctx):
         f"Context:\n{context}\n\nQuestion: {question}\n\nAnswer:"
     )
     resp = client.chat.completions.create(
-        model=MODEL, messages=[{"role": "user", "content": prompt}]
+        model=MODEL,
+        messages=[{"role": "user", "content": prompt}],
+        reasoning_effort="low",
+        max_tokens=1024,
     )
     return resp.choices[0].message.content.strip()
 
@@ -55,7 +58,7 @@ def ask(question):
 with gr.Blocks(title="Citera") as demo:
     gr.Markdown("# 📑 Citera")
     gr.Markdown(
-        "Grounded Q&A over ~280 arXiv papers on diffusion models. Answers come only from "
+        "Grounded Q&A over 304 arXiv paper abstracts on diffusion models. Answers come only from "
         "retrieved papers (with cross-encoder reranking), with inline citations — and the "
         "system **abstains** when the papers don't support an answer instead of hallucinating."
     )

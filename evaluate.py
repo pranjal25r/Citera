@@ -8,7 +8,7 @@ from groq import Groq
 
 load_dotenv()
 
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "openai/gpt-oss-120b"
 MIN_INTERVAL = 2.5                     # Groq free tier = 30 RPM (1 per 2s)
 TOP_K = 4
 FETCH_K = 20
@@ -34,6 +34,8 @@ def ask_llm(prompt, retries=6):
             resp = client.chat.completions.create(
                 model=MODEL,
                 messages=[{"role": "user", "content": prompt}],
+                reasoning_effort="low",
+                max_tokens=1024,
             )
             return resp.choices[0].message.content.strip()
         except Exception as e:
