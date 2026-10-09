@@ -1,4 +1,5 @@
 import json
+import re
 import numpy as np
 import faiss
 import gradio as gr
@@ -32,7 +33,8 @@ def generate(question, ctx):
     context = "\n\n".join(f"[{n+1}] {p['title']}\n{p['abstract']}" for n, p in enumerate(ctx))
     prompt = (
         'Answer using ONLY the context below. If it does not contain the answer, say exactly: '
-        f'"{ABSTAIN_LINE}" Cite the sources you use by their [number].\n\n'
+        f'"{ABSTAIN_LINE}" Cite the sources you use by their [number]. '
+        'Cite sources only as [1], [2], etc.\n\n'
         f"Context:\n{context}\n\nQuestion: {question}\n\nAnswer:"
     )
     resp = client.chat.completions.create(
@@ -41,7 +43,8 @@ def generate(question, ctx):
         reasoning_effort="low",
         max_tokens=1024,
     )
-    return resp.choices[0].message.content.strip()
+    text = resp.choices[0].message.content.strip()
+    return re.sub(r"【(\d+)†[^】]*】", r"[\1]", text)
 
 
 def ask(question):

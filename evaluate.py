@@ -61,9 +61,11 @@ def retrieve_reranked(question):
 
 def generate(question, ctx):
     context = "\n\n".join(f"[{n+1}] {p['title']}\n{p['abstract']}" for n, p in enumerate(ctx))
-    return ask_llm('Answer using ONLY the context. If it does not contain the answer, say exactly: '
-        '"I don\'t have enough information to answer that." Cite sources by [number].\n\n'
+    text = ask_llm('Answer using ONLY the context. If it does not contain the answer, say exactly: '
+        '"I don\'t have enough information to answer that." Cite sources by [number]. '
+        'Cite sources only as [1], [2], etc.\n\n'
         f"Context:\n{context}\n\nQuestion: {question}\n\nAnswer:")
+    return re.sub(r"【(\d+)†[^】]*】", r"[\1]", text)
 
 def judge(question, answer, ctx):
     context = "\n\n".join(f"[{i+1}] {p['title']}\n{p['abstract']}" for i, p in enumerate(ctx))
