@@ -65,7 +65,7 @@ def generate(question, ctx):
         '"I don\'t have enough information to answer that." Cite sources by [number]. '
         'Cite sources only as [1], [2], etc.\n\n'
         f"Context:\n{context}\n\nQuestion: {question}\n\nAnswer:")
-    return re.sub(r"【(\d+)†[^】]*】", r"[\1]", text)
+    return re.sub(r"【(\d+)[^】]*】", r"[\1]", text)
 
 def judge(question, answer, ctx):
     context = "\n\n".join(f"[{i+1}] {p['title']}\n{p['abstract']}" for i, p in enumerate(ctx))

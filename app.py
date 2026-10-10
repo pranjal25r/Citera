@@ -44,7 +44,7 @@ def generate(question, ctx):
         max_tokens=1024,
     )
     text = resp.choices[0].message.content.strip()
-    return re.sub(r"【(\d+)†[^】]*】", r"[\1]", text)
+    return re.sub(r"【(\d+)[^】]*】", r"[\1]", text)
 
 
 def ask(question):
