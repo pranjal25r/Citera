@@ -1,0 +1,12 @@
+{
+  "qid": "Q31",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can a large language model be made to forget information without a dataset of knowledge to keep, with guidance applied at inference?",
+  "context_ids": [
+    "2412.06846v1",
+    "2602.07546v1",
+    "2509.22728v2",
+    "2606.16360v1"
+  ],
+  "answer": "A large language model can be “unlearned” without needing a separate dataset of the knowledge to retain by training it directly on synthetic replacement data while using a classifier‑free‑guidance‑aware regime, and then applying the classifier‑free guidance (CFG) only at inference time. In practice this is done with the ORPO reinforcement‑learning method, which updates the model on the synthetic data (so no original “keep” dataset is required), and the same CFG mechanism is used during generation to steer the model away from the removed information without degrading overall performance【1】."
+}

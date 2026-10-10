@@ -1,0 +1,12 @@
+{
+  "qid": "Q40",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can quantities such as mutual information and estimation-error bounds be estimated from data for wireless systems that share spectrum between sensing and data transmission?",
+  "context_ids": [
+    "2508.02117v1",
+    "2309.08568v2",
+    "2309.08688v1",
+    "2507.05454v2"
+  ],
+  "answer": "Quantities such as mutual information, minimum‑mean‑squared‑error (MMSE) and Bayesian Cramér–Rao bounds can be obtained directly from measured data by learning the underlying score function of the joint sensing‑communication distribution with a score‑based generative model.  In the “scoring ISAC” framework, a neural network is trained to approximate the gradient of the log‑probability density (the score) of the observed signals; once the score is available, analytic relationships between the score and the classical performance metrics are used to compute MI, MMSE and BCRB without requiring any closed‑form statistical model.  This data‑driven approach therefore bypasses the need for tractable analytical expressions in the presence of hardware impairments, multipath, interference and other non‑Gaussian effects, and yields accurate estimates of the information‑theoretic and estimation‑error bounds for spectrum‑shared sensing‑communication systems【1】."
+}

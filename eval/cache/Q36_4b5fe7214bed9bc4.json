@@ -1,0 +1,12 @@
+{
+  "qid": "Q36",
+  "model": "openai/gpt-oss-120b",
+  "question": "What success rate did an autonomous AI agent achieve at designing antibodies that were confirmed to bind in the lab, and how much faster were experts who used it?",
+  "context_ids": [
+    "2603.29727v2",
+    "2507.19375v1",
+    "2512.20263v1",
+    "2402.13144v3"
+  ],
+  "answer": "The autonomous AI agent (Latent‑Y) achieved a **67 % target‑level success rate** in producing laboratory‑confirmed antibody binders, and experts using the agent completed design campaigns **about 56 times faster** than independent expert time estimates【1】."
+}

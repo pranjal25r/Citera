@@ -1,0 +1,12 @@
+{
+  "qid": "Q15",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can a real photograph be told apart from a diffusion-generated one by looking at how well a pretrained model can reproduce the image?",
+  "context_ids": [
+    "2303.09295v1",
+    "2303.02490v2",
+    "2404.01709v1",
+    "2206.01714v6"
+  ],
+  "answer": "A pretrained diffusion model can be used to reconstruct any input image, and the reconstruction error – called DIffusion Reconstruction Error (DIRE) – reveals whether the image is real or synthetic.  Diffusion‑generated images are easily approximated by the model, so the reconstruction error is small, whereas real photographs cannot be faithfully reproduced and yield a larger error.  By measuring this error, one can distinguish real photographs from diffusion‑generated ones【1】."
+}

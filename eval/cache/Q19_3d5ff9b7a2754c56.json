@@ -1,0 +1,12 @@
+{
+  "qid": "Q19",
+  "model": "openai/gpt-oss-120b",
+  "question": "Can the normally sequential denoising steps be computed concurrently by posing sampling as a fixed-point problem, and how many steps does that save?",
+  "context_ids": [
+    "2402.09970v2",
+    "2511.09180v1",
+    "2402.19455v2",
+    "2507.18654v2"
+  ],
+  "answer": "Yes. By reformulating diffusion sampling as a fixed‑point problem (solving a system of triangular nonlinear equations), the normally sequential denoising steps can be computed in parallel. This parallel approach reduces the number of inference steps needed by roughly a factor of 4 to 14 compared with conventional sequential samplers such as DDIM or DDPM【1】."
+}

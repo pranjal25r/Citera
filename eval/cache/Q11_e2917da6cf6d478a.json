@@ -1,0 +1,12 @@
+{
+  "qid": "Q11",
+  "model": "openai/gpt-oss-120b",
+  "question": "Can a natural-language description of a task be used to generate the parameters of a neural network for an unseen task without any fine-tuning?",
+  "context_ids": [
+    "2210.08942v2",
+    "2402.13144v3",
+    "2206.01714v6",
+    "2304.09116v3"
+  ],
+  "answer": "Yes. The proposed meta‑learning approach uses a natural‑language description of a task as guidance for a hypernetwork (via “HyperCLIP” classifier guidance or a conditional latent diffusion model) to directly generate neural‑network weights that are adapted to that unseen task, all in a zero‑shot manner without any further fine‑tuning [1]."
+}

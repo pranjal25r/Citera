@@ -1,0 +1,12 @@
+{
+  "qid": "Q24",
+  "model": "openai/gpt-oss-120b",
+  "question": "When creating extra viewpoints from light-field camera data, why might it work better to measure training error on images combined from many views rather than on each view separately?",
+  "context_ids": [
+    "1910.06072v5",
+    "2508.10688v2",
+    "2110.15678v3",
+    "2605.30330v1"
+  ],
+  "answer": "Measuring the error on images that are formed by combining many views (e.g., refocused images) is more effective because the light‑field is ultimately perceived as a single integrated image rather than as a set of isolated viewpoints.  Traditional view‑synthesis losses that evaluate each view independently ignore how the synthesized views will behave when they are composited into a refocused picture, which can lead to artifacts that are not captured by per‑view metrics.  By training on a loss computed on the combined, refocused image (the “refocused image error”), the network is encouraged to produce a light field whose overall refocused quality is high, yielding better visual results than optimizing each view separately [1]."
+}

@@ -1,22 +1,25 @@
 # Citera Evaluation-Driven RAG over Diffusion-Model Papers
 **🔗 [Live Demo](https://huggingface.co/spaces/pranjal25r/citera)**
 
-A retrieval-augmented question-answering system over **~304 arXiv papers on diffusion models**, built to *measure and improve* retrieval quality rather than just ship a chatbot. Every answer is grounded in retrieved papers and cited; the system **abstains when it lacks evidence** instead of hallucinating; and retrieval strategies are **benchmarked with an LLM-as-judge harness**.
+A retrieval-augmented question-answering system over **~304 arXiv papers on diffusion models**, built to *measure and improve* retrieval quality rather than just ship a chatbot. Every answer is grounded in retrieved papers and cited; the system **abstains when it lacks evidence** instead of hallucinating; and the system is **tested on 52 hand-checked questions**.
 
 ---
 
-## Headline result
+## Evaluation
 
-*The evaluation results below were produced with Llama-3.3-70B, which Groq retired in August 2026; they have not been re-run on gpt-oss-120b.*
+Tested on 52 questions: 40 that one paper in the collection answers, and 12 that no paper answers (6 off-topic, 6 close to the subject but not covered). Questions were drafted by AI from one paper each, then checked and edited by me. Method and limits: [eval/README_eval.md](eval/README_eval.md).
 
-On a deliberately scaled, noisy corpus, **cross-encoder reranking improved retrieval context precision by 50%** (0.25 → 0.375) while *also* lifting answer faithfulness, with perfect abstention on out-of-domain questions maintained throughout.
+| What was checked | Result |
+|---|---|
+| Right paper among the 4 given to the model, simple search (top 4) | 37 of 40 |
+| Right paper among the 4 given to the model, the app's method (top 20, re-rank, keep 4) | 38 of 40 |
+| Answerable questions that got an answer rather than a refusal | 39 of 40 |
+| Unanswerable questions refused | 12 of 12 (off-topic 6 of 6, close-but-not-covered 6 of 6) |
+| Answers that cite only sources 1 to 4 | 39 of 39 |
 
-| Config | Faithfulness | Answer Relevancy | Context Precision | Abstention Acc. |
-|---|---:|---:|---:|---:|
-| Naive dense retrieval | 0.933 | 0.967 | 0.250 | 1.00 |
-| + Cross-encoder rerank | **0.950** | **0.975** | **0.375** | 1.00 |
+Re-ranking fixed 3 questions, broke 2 and left 35 unchanged, a net difference of one question, which is too small to say it helps on this set. Only the paper a question was written from counts as the right one, and the answers were not graded for correctness.
 
-*Scores are LLM-as-judge (0–1) over an 11-question eval set: 8 in-domain diffusion questions + 3 out-of-domain. Abstention accuracy = fraction of out-of-domain questions correctly refused.*
+This replaces an earlier evaluation, which was dropped because the two setups had been scored on different questions.
 
 ---
 
@@ -27,7 +30,7 @@ arXiv API ──► abstracts ──► sentence-transformer embeddings ──�
                                                                     │
 question ──► embed ──► retrieve top-k ──►(optional cross-encoder rerank)──► grounded LLM ──► cited answer / abstain
                                                                     │
-                                              LLM-as-judge ◄── (question, answer, contexts)
+                                              evaluation ◄── (question, retrieved papers, answer)
 ```
 
 1. **Ingestion** pull diffusion-model papers from the arXiv API across ~10 subtopic queries (DDPM, score-based models, classifier-free guidance, latent diffusion, DiT, DDIM, text-to-image, …), deduplicate, and store abstracts. Abstracts (not full PDFs) keep the corpus clean and dense so retrieval quality isn't fighting messy PDF parsing.
@@ -36,19 +39,7 @@ question ──► embed ──► retrieve top-k ──►(optional cross-encod
    - *Naive dense*: take the top-4 by embedding similarity.
    - *Reranked*: cast a wider net (top-20 by embedding), then a cross-encoder (`ms-marco-MiniLM-L-6-v2`) re-scores each (question, passage) pair and keeps the best 4.
 4. **Generation** the LLM (gpt-oss-120b via Groq) answers using **only** the retrieved context, cites sources by number, and is instructed to refuse "I don't have enough information to answer that" when the context doesn't support an answer.
-5. **Evaluation** an LLM-as-judge harness scores every answer on **faithfulness** (are all claims supported by the context?), **answer relevancy** (does it address the question?), and **context precision** (what fraction of retrieved chunks are relevant?), plus **abstention accuracy** on out-of-domain questions.
-
----
-
-## Key findings
-
-**1. Reranking's value depends on retrieval noise.** On an initial small (~100-paper), tightly on-topic corpus, reranking made almost no difference (context precision 0.45 → 0.46) dense retrieval already surfaced the few relevant papers, leaving nothing to reorder. Only after scaling the corpus to ~304 papers, which introduced realistic near-miss noise, did reranking demonstrate clear value (0.25 → 0.375). The lesson: a reranker earns its keep when the first-stage retriever makes ranking errors, which happens in larger, noisier corpora not in toy ones.
-
-**2. Better retrieval improves answer faithfulness.** Cleaner context from reranking didn't just raise precision it lifted faithfulness (0.933 → 0.950), because the generator had fewer irrelevant chunks to be misled by.
-
-**3. The system stays reliable under imperfect retrieval.** Even at a modest 0.375 context precision, faithfulness held at 0.95 and abstention at 100%. Grounding constraints plus abstention make the system robust to noisy retrieval rather than brittle.
-
-**On absolute numbers:** context precision is capped low here because each question has only ~1–2 truly relevant papers in a ~304-paper corpus, so precision@4 can't exceed ~0.25–0.5 by construction. The *improvement* from reranking is the headline, not the absolute value.
+5. **Evaluation** 52 hand-checked questions measure whether the right paper is among the 4 retrieved, whether the system answers when it should and refuses when it should, and whether citations point to the retrieved papers. See [eval/README_eval.md](eval/README_eval.md).
 
 ---
 
@@ -69,7 +60,7 @@ Ran the same 304-paper embedding set through both backends (identical embeddings
 - **Cosine via normalized inner product** simple, exact search appropriate for a few-hundred-document corpus (no approximate index needed).
 - **Wide-net retrieve → rerank** the reranker can only promote relevant papers it's given, so the first stage fetches 20 candidates before narrowing to 4.
 - **Abstention as a first-class behavior** currently enforced via grounding prompt; a confidence-based version using retrieval scores is the natural next step.
-- **Custom LLM-as-judge instead of a library** implemented faithfulness / relevancy / context-precision using their standard definitions, on the same inference stack as the system. This avoids dependency churn and, more importantly, makes the metric fully explainable end to end.
+- **Plain counts instead of model-graded scores** the evaluation reports "X of N" checks that anyone can verify by hand, rather than scores assigned by another AI model.
 
 ---
 
@@ -77,7 +68,8 @@ Ran the same 304-paper embedding set through both backends (identical embeddings
 
 - **Confidence-based abstention** trigger refusal from retrieval-score thresholds, not just prompt instructions.
 - **Hybrid retrieval** fuse BM25 (keyword) with dense embeddings; exact-term matching often helps on technical jargon.
-- **Stronger / independent judge** cross-validate the LLM-as-judge scores against the RAGAS library and a different judge model to reduce self-evaluation bias.
+- **Grade the answers** have people (or a model from a different family) check whether each answer is supported by the retrieved papers; the current evaluation only checks answered vs refused.
+- **Harder, larger question set** more than 40 questions, written without looking at the source paper, with more than one acceptable paper per question.
 - **Full-text chunking** index paper bodies, not just abstracts, with proper chunking and overlap.
 
 ---
@@ -107,7 +99,7 @@ Then run the pipeline:
 python3 fetch_papers.py     # pull diffusion papers from arXiv → data/papers.json
 python3 build_index.py      # embed abstracts → FAISS index
 python3 app.py              # Gradio Q&A demo (pip install -r requirements.txt, export GROQ_API_KEY)
-python3 evaluate.py         # run the naive-vs-reranked ablation
+python3 eval/run_eval_v2.py # run the evaluation (replies are cached in eval/cache/)
 ```
 
 ---
@@ -119,10 +111,11 @@ rag_arxiv/
 ├── fetch_papers.py        # pull diffusion papers from arXiv → data/papers.json
 ├── build_index.py         # embed abstracts → FAISS index
 ├── app.py                 # Gradio demo: retrieve + rerank + grounded, cited answer
-├── evaluate.py            # ablation harness: naive vs reranked, LLM-as-judge
-├── eval_questions.json    # in-domain + out-of-domain eval set
+├── eval/                  # current evaluation: questions, script, cached replies, results
+├── evaluate.py            # earlier evaluation harness (superseded by eval/)
+├── eval_questions.json    # earlier 11-question set (superseded)
 ├── data/                  # papers.json, papers.index
-├── results_ablation.json  # saved metrics
+├── results_ablation.json  # earlier results (superseded)
 ├── .env                   # GROQ_API_KEY (gitignored)
 └── README.md
 ```

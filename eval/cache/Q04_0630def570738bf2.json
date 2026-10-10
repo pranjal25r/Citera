@@ -1,0 +1,12 @@
+{
+  "qid": "Q04",
+  "model": "openai/gpt-oss-120b",
+  "question": "For generative models that work by progressively unmasking tokens, at what point in sampling does strong guidance hurt quality and at what point does it help?",
+  "context_ids": [
+    "2512.17303v1",
+    "2510.11057v1",
+    "2311.00938v1",
+    "2505.20199v1"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

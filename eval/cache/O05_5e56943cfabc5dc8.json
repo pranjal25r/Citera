@@ -1,0 +1,12 @@
+{
+  "qid": "O05",
+  "model": "openai/gpt-oss-120b",
+  "question": "What is the difference between a Roth IRA and a traditional IRA?",
+  "context_ids": [
+    "2210.00939v6",
+    "2407.16477v2",
+    "2210.12254v2",
+    "2306.05414v3"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

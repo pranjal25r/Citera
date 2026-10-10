@@ -1,0 +1,12 @@
+{
+  "qid": "Q37",
+  "model": "openai/gpt-oss-120b",
+  "question": "Which generative model jointly produces the full atomic structure and sequence of a binder for a given protein epitope, and what experimental hit rates did it reach?",
+  "context_ids": [
+    "2507.19375v1",
+    "2512.20263v1",
+    "2202.02763v3",
+    "2603.29727v2"
+  ],
+  "answer": "The model that jointly generates the full atomic structure and sequence of a binder for a given protein epitope is **Latent‑X**. In experimental tests on macro‑cyclic peptide targets, Latent‑X achieved **hit rates exceeding 90 %**【1】."
+}

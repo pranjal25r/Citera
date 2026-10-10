@@ -1,0 +1,318 @@
+{
+  "status": "reviewed: questions checked and edited by a human; only the gold paper counts as correct",
+  "dropped": [],
+  "questions": [
+    {
+      "qid": "Q01",
+      "type": "in_domain",
+      "question": "How can changing the loss used at training time make a conditional diffusion model less sensitive to the guidance strength chosen at sampling time?",
+      "gold": "2311.00938v1"
+    },
+    {
+      "qid": "Q02",
+      "type": "in_domain",
+      "question": "Can a diffusion model be trained so that it no longer has to combine conditional and unconditional predictions at inference, and what does that do to inference speed?",
+      "gold": "2502.12154v1"
+    },
+    {
+      "qid": "Q03",
+      "type": "in_domain",
+      "question": "When the conditional distribution has several modes, what successive phases does guided sampling go through, and why does stronger guidance reduce diversity?",
+      "gold": "2509.22007v2"
+    },
+    {
+      "qid": "Q04",
+      "type": "in_domain",
+      "question": "For generative models that work by progressively unmasking tokens, at what point in sampling does strong guidance hurt quality and at what point does it help?",
+      "gold": "2507.08965v2"
+    },
+    {
+      "qid": "Q05",
+      "type": "in_domain",
+      "question": "What has been proposed as the underlying cause of poor invertibility and mode collapse in guided text-to-image sampling, and what fix follows from treating text conditioning as an inverse problem?",
+      "gold": "2406.08070v2"
+    },
+    {
+      "qid": "Q06",
+      "type": "in_domain",
+      "question": "Can noising and then denoising a maliciously perturbed histopathology image protect a classifier, and how much of the original accuracy is recovered?",
+      "gold": "2301.06871v1"
+    },
+    {
+      "qid": "Q07",
+      "type": "in_domain",
+      "question": "How can images poisoned to disrupt a latent text-to-image model be cleaned when the attack targets its encoder, its denoiser, or both?",
+      "gold": "2601.07253v1"
+    },
+    {
+      "qid": "Q08",
+      "type": "in_domain",
+      "question": "Why might the usual stable reverse-sampling procedure be a poor fit when a diffusion model is used to cleanse attacked inputs, and what alternative sampling scheme adds more randomness?",
+      "gold": "2411.18956v1"
+    },
+    {
+      "qid": "Q09",
+      "type": "in_domain",
+      "question": "How can a generative model that learns gradients of log-densities be used to test whether two variables are independent given a third, while controlling the false-positive rate?",
+      "gold": "2505.23309v1"
+    },
+    {
+      "qid": "Q10",
+      "type": "in_domain",
+      "question": "How can the output of a GAN serve as a starting point for a diffusion model that converts between medical imaging modalities and also reports uncertainty?",
+      "gold": "2405.12223v3"
+    },
+    {
+      "qid": "Q11",
+      "type": "in_domain",
+      "question": "Can a natural-language description of a task be used to generate the parameters of a neural network for an unseen task without any fine-tuning?",
+      "gold": "2210.08942v2"
+    },
+    {
+      "qid": "Q12",
+      "type": "in_domain",
+      "question": "How can keyframes, sketches or depth maps be used to steer a video generator without fine-tuning the model?",
+      "gold": "2506.07177v2"
+    },
+    {
+      "qid": "Q13",
+      "type": "in_domain",
+      "question": "How can a model that generates sung vocals be trained when most of the available audio has no aligned lyrics or pitch annotations?",
+      "gold": "2406.05965v1"
+    },
+    {
+      "qid": "Q14",
+      "type": "in_domain",
+      "question": "According to an overview of diffusion-based video generation, what are the main open challenges for the field?",
+      "gold": "2405.03150v2"
+    },
+    {
+      "qid": "Q15",
+      "type": "in_domain",
+      "question": "How can a real photograph be told apart from a diffusion-generated one by looking at how well a pretrained model can reproduce the image?",
+      "gold": "2303.09295v1"
+    },
+    {
+      "qid": "Q16",
+      "type": "in_domain",
+      "question": "How can the discrete-step probabilistic formulation, score-based SDEs, deterministic implicit samplers and flow matching all be explained within one differential-equation picture?",
+      "gold": "2605.22586v3"
+    },
+    {
+      "qid": "Q17",
+      "type": "in_domain",
+      "question": "What is gained by learning the variances of the reverse process instead of fixing them, in terms of the number of network evaluations needed for sampling?",
+      "gold": "2102.09672v1"
+    },
+    {
+      "qid": "Q18",
+      "type": "in_domain",
+      "question": "Which exact mathematical results have been derived for the generalized deterministic implicit sampler and for exponential-integrator solvers?",
+      "gold": "2408.07285v1"
+    },
+    {
+      "qid": "Q19",
+      "type": "in_domain",
+      "question": "Can the normally sequential denoising steps be computed concurrently by posing sampling as a fixed-point problem, and how many steps does that save?",
+      "gold": "2402.09970v2"
+    },
+    {
+      "qid": "Q20",
+      "type": "in_domain",
+      "question": "How can the spatial resolution of metabolic imaging of brain tumour patients be increased with a shortened diffusion chain?",
+      "gold": "2410.19288v1"
+    },
+    {
+      "qid": "Q21",
+      "type": "in_domain",
+      "question": "How can block artefacts be avoided when a learned image codec encodes each patch independently, while still allowing patches to be decoded in parallel?",
+      "gold": "1912.05189v2"
+    },
+    {
+      "qid": "Q22",
+      "type": "in_domain",
+      "question": "How can an image generator look up reference patches repeatedly as it generates, instead of retrieving whole reference images once at the start?",
+      "gold": "2506.06962v3"
+    },
+    {
+      "qid": "Q23",
+      "type": "in_domain",
+      "question": "How can linear dimensionality reduction for images be redesigned to keep what people perceive as image quality, instead of minimising pixel-by-pixel error?",
+      "gold": "1908.09287v1"
+    },
+    {
+      "qid": "Q24",
+      "type": "in_domain",
+      "question": "When creating extra viewpoints from light-field camera data, why might it work better to measure training error on images combined from many views rather than on each view separately?",
+      "gold": "1910.06072v5"
+    },
+    {
+      "qid": "Q25",
+      "type": "in_domain",
+      "question": "How can a diffusion-based method remove blur from images when no matched sharp and blurry training pairs exist for the target domain?",
+      "gold": "2502.01522v2"
+    },
+    {
+      "qid": "Q26",
+      "type": "in_domain",
+      "question": "Reconstruction quality drops at large guidance scales when real photos are edited by inverting a deterministic sampler; how can a training-free negative-prompt approach be improved to reduce the resulting artifacts?",
+      "gold": "2306.05414v3"
+    },
+    {
+      "qid": "Q27",
+      "type": "in_domain",
+      "question": "How can several diffusion models be combined at test time so that a generated image correctly binds attributes to objects and respects the relations in a complex prompt?",
+      "gold": "2206.01714v6"
+    },
+    {
+      "qid": "Q28",
+      "type": "in_domain",
+      "question": "How can a text prompt be turned into an animatable 3D face by optimising a parametric head model with a 2D image diffusion prior?",
+      "gold": "2307.04859v1"
+    },
+    {
+      "qid": "Q29",
+      "type": "in_domain",
+      "question": "How can people's judgments of generated images be turned into tokens that help remove harmful or copyrighted concepts from an image generator?",
+      "gold": "2407.21032v1"
+    },
+    {
+      "qid": "Q30",
+      "type": "in_domain",
+      "question": "How can the number of points or strokes in generated free-hand drawings be controlled explicitly?",
+      "gold": "2306.09274v1"
+    },
+    {
+      "qid": "Q31",
+      "type": "in_domain",
+      "question": "How can a large language model be made to forget information without a dataset of knowledge to keep, with guidance applied at inference?",
+      "gold": "2412.06846v1"
+    },
+    {
+      "qid": "Q32",
+      "type": "in_domain",
+      "question": "In a masked diffusion language model, how can the unconditional branch of guidance be built dynamically from the tokens the model is least sure about?",
+      "gold": "2505.20199v1"
+    },
+    {
+      "qid": "Q33",
+      "type": "in_domain",
+      "question": "How can a decision tree be grown when the data are grouped by a control variable, such as sex or time, that may confound the outcome?",
+      "gold": "2606.13295v2"
+    },
+    {
+      "qid": "Q34",
+      "type": "in_domain",
+      "question": "What happens to long-range stability when sequential dependence between latent variables is removed from a variational language model with a Gaussian-process prior?",
+      "gold": "2512.24102v1"
+    },
+    {
+      "qid": "Q35",
+      "type": "in_domain",
+      "question": "How can a language model decide, during decoding, when to reason in continuous hidden representations instead of writing out intermediate steps, and how much compute to spend on it?",
+      "gold": "2606.16360v1"
+    },
+    {
+      "qid": "Q36",
+      "type": "in_domain",
+      "question": "What success rate did an autonomous AI agent achieve at designing antibodies that were confirmed to bind in the lab, and how much faster were experts who used it?",
+      "gold": "2603.29727v2"
+    },
+    {
+      "qid": "Q37",
+      "type": "in_domain",
+      "question": "Which generative model jointly produces the full atomic structure and sequence of a binder for a given protein epitope, and what experimental hit rates did it reach?",
+      "gold": "2507.19375v1"
+    },
+    {
+      "qid": "Q38",
+      "type": "in_domain",
+      "question": "How can evolutionary optimisers that learn a probabilistic model of good solutions cut down on expensive fitness evaluations?",
+      "gold": "0405062v1"
+    },
+    {
+      "qid": "Q39",
+      "type": "in_domain",
+      "question": "How can safety constraints be enforced when control trajectories for a physical system are planned by iterative denoising?",
+      "gold": "2306.15512v1"
+    },
+    {
+      "qid": "Q40",
+      "type": "in_domain",
+      "question": "How can quantities such as mutual information and estimation-error bounds be estimated from data for wireless systems that share spectrum between sensing and data transmission?",
+      "gold": "2508.02117v1"
+    },
+    {
+      "qid": "O01",
+      "type": "out_domain",
+      "subtype": "off_topic",
+      "question": "What is the boiling point of water at the summit of Mount Everest?"
+    },
+    {
+      "qid": "O02",
+      "type": "out_domain",
+      "subtype": "off_topic",
+      "question": "Which country won the FIFA World Cup in 2010?"
+    },
+    {
+      "qid": "O03",
+      "type": "out_domain",
+      "subtype": "off_topic",
+      "question": "How should I prune a tomato plant to get more fruit?"
+    },
+    {
+      "qid": "O04",
+      "type": "out_domain",
+      "subtype": "off_topic",
+      "question": "What causes the seasons on Earth?"
+    },
+    {
+      "qid": "O05",
+      "type": "out_domain",
+      "subtype": "off_topic",
+      "question": "What is the difference between a Roth IRA and a traditional IRA?"
+    },
+    {
+      "qid": "O06",
+      "type": "out_domain",
+      "subtype": "off_topic",
+      "question": "How does TCP congestion control decide when to slow down?"
+    },
+    {
+      "qid": "O07",
+      "type": "out_domain",
+      "subtype": "near_miss",
+      "question": "How do consistency models enable single-step image generation?"
+    },
+    {
+      "qid": "O08",
+      "type": "out_domain",
+      "subtype": "near_miss",
+      "question": "How does Fick's second law describe the diffusion of a solute through a liquid?"
+    },
+    {
+      "qid": "O09",
+      "type": "out_domain",
+      "subtype": "near_miss",
+      "question": "How does the gradient penalty stabilise the training of a Wasserstein GAN?"
+    },
+    {
+      "qid": "O10",
+      "type": "out_domain",
+      "subtype": "near_miss",
+      "question": "How does bias correction work in the Adam optimizer?"
+    },
+    {
+      "qid": "O11",
+      "type": "out_domain",
+      "subtype": "near_miss",
+      "question": "What does the Evoformer module do in AlphaFold?"
+    },
+    {
+      "qid": "O12",
+      "type": "out_domain",
+      "subtype": "near_miss",
+      "question": "How can a membership inference attack reveal whether an image was in a diffusion model's training set?"
+    }
+  ]
+}

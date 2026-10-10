@@ -1,0 +1,12 @@
+{
+  "qid": "Q01",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can changing the loss used at training time make a conditional diffusion model less sensitive to the guidance strength chosen at sampling time?",
+  "context_ids": [
+    "2311.00938v1",
+    "2509.22007v2",
+    "2407.02687v2",
+    "2512.17303v1"
+  ],
+  "answer": "Changing the loss function during training can align the model’s objective more closely with the way it will be used at sampling time.  By incorporating the effect of classifier‑free guidance directly into the training loss, the model learns to produce samples that remain high‑quality across a range of guidance scales instead of only when a specific scale is used.  This reduces the discrepancy between the training objective and the conditional sampling behavior, making the resulting conditional diffusion model far less sensitive to the exact guidance‑strength ( w ) chosen during inference [1]."
+}

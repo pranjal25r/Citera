@@ -1,0 +1,12 @@
+{
+  "qid": "Q05",
+  "model": "openai/gpt-oss-120b",
+  "question": "What has been proposed as the underlying cause of poor invertibility and mode collapse in guided text-to-image sampling, and what fix follows from treating text conditioning as an inverse problem?",
+  "context_ids": [
+    "2406.08070v2",
+    "2301.11558v1",
+    "2507.18654v2",
+    "2506.24108v3"
+  ],
+  "answer": "The poor invertibility and mode‑collapse observed with guided text‑to‑image sampling have been attributed to the **off‑manifold phenomenon caused by classifier‑free guidance (CFG)** rather than to an inherent limitation of diffusion models themselves【1】.  \n\nBy **treating text conditioning as an inverse problem** and formulating it with a **text‑conditioned score‑matching loss**, the authors introduce a simple correction to CFG—named **CFG++**—which restores invertibility, reduces mode collapse, and improves sample quality【1】."
+}

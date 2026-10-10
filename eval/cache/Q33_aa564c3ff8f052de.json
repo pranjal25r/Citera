@@ -1,0 +1,12 @@
+{
+  "qid": "Q33",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can a decision tree be grown when the data are grouped by a control variable, such as sex or time, that may confound the outcome?",
+  "context_ids": [
+    "2606.13295v2",
+    "2001.04197v4",
+    "2502.17100v4",
+    "2412.10193v3"
+  ],
+  "answer": "When the observations are stratified by a control variable (e.g., sex, time, location) that could act as a confounder, the tree is grown with a **model‑based split rule** rather than the usual impurity‑based rule.  \nAt each parent node a **Simultaneous Latent Budget Model (or one of its constrained versions)** is fitted to the data for all levels of the control variable simultaneously. The model treats the child nodes as latent components of a mixture model:  \n\n* **Mixing parameters** determine how observations from each group (e.g., male vs. female, different time periods) are probabilistically assigned to the child nodes.  \n* **Latent‑budget parameters** describe the class‑distribution profile within each child node for each level of the control variable.  \n\nThe parameters are estimated by least‑squares (viewed through a neural‑network lens), and the resulting split is chosen because it best fits this simultaneous mixture model. By doing so, the tree explicitly accounts for the differing effects of the control variable on the outcome, avoiding bias that would arise from a naïve split that ignores the confounder. The resulting tree can be visualized with interpretation aids, and pruning/selection procedures are applied after the model‑based growth.  \n\nThus, a decision tree can be grown on grouped (potentially confounded) data by fitting a simultaneous latent‑budget mixture at each node and using its estimated parameters to define the split rule.  [1]"
+}

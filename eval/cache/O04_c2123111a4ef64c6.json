@@ -1,0 +1,12 @@
+{
+  "qid": "O04",
+  "model": "openai/gpt-oss-120b",
+  "question": "What causes the seasons on Earth?",
+  "context_ids": [
+    "2402.19455v2",
+    "2312.01682v1",
+    "2202.02763v3",
+    "2302.00860v3"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

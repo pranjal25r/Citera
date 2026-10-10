@@ -1,0 +1,12 @@
+{
+  "qid": "Q02",
+  "model": "openai/gpt-oss-120b",
+  "question": "Can a diffusion model be trained so that it no longer has to combine conditional and unconditional predictions at inference, and what does that do to inference speed?",
+  "context_ids": [
+    "2407.02687v2",
+    "2207.12598v1",
+    "2502.12154v1",
+    "2505.21101v1"
+  ],
+  "answer": "Yes.  According to the paper “Diffusion Models without Classifier‑free Guidance,” the authors introduce Model‑guidance (MG), an objective that eliminates the need for classifier‑free guidance at inference—i.e., the model no longer has to linearly combine conditional and unconditional predictions.  This change “significantly accelerates the training process, doubles the inference speed, and achieve[s] exceptional quality”【3】."
+}

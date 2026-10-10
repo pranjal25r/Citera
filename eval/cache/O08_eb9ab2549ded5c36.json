@@ -1,0 +1,12 @@
+{
+  "qid": "O08",
+  "model": "openai/gpt-oss-120b",
+  "question": "How does Fick's second law describe the diffusion of a solute through a liquid?",
+  "context_ids": [
+    "2006.11239v2",
+    "2605.22586v3",
+    "2312.07586v5",
+    "2404.07724v2"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

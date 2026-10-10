@@ -1,0 +1,12 @@
+{
+  "qid": "Q10",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can the output of a GAN serve as a starting point for a diffusion model that converts between medical imaging modalities and also reports uncertainty?",
+  "context_ids": [
+    "2405.12223v3",
+    "2206.02262v4",
+    "2311.04552v1",
+    "2102.09672v1"
+  ],
+  "answer": "The CMDM framework first runs a conditional GAN to synthesize an initial “prior” image in the target modality. This GAN‑generated image is then fed to a diffusion model, which performs the reverse diffusion (denoising) steps to refine the translation. Because the diffusion stage operates on a known prior, it can converge in far fewer iterations while still producing high‑quality modality‑to‑modality conversions. Moreover, CMDM’s multi‑path shortcut diffusion strategy propagates multiple diffusion trajectories, allowing the model to compute the variance across these paths and thereby estimate the uncertainty of each pixel’s translation. In this way, the GAN output acts as the starting point for the diffusion process, which both finalizes the medical‑image translation and provides uncertainty estimates that correlate with translation error【1】."
+}

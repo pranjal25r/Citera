@@ -1,0 +1,12 @@
+{
+  "qid": "Q07",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can images poisoned to disrupt a latent text-to-image model be cleaned when the attack targets its encoder, its denoiser, or both?",
+  "context_ids": [
+    "2401.03221v1",
+    "2404.06666v3",
+    "2601.07253v1",
+    "2407.21032v1"
+  ],
+  "answer": "Images that have been poisoned to disrupt a latent text‑to‑image model—whether the adversarial perturbation is injected into the VAE encoder, the UNet denoiser, or both—can be cleaned by applying **Universal Diffusion Adversarial Purification (UDAP)**.  \nUDAP exploits the fact that clean and adversarial images behave differently during **DDIM inversion**. By running an inversion of the corrupted image with a **DDIM metric loss**, the method iteratively adjusts the latent code so that the reconstructed image follows the clean‑image reconstruction trajectory, effectively removing the adversarial noise regardless of which component (encoder, denoiser, or a hybrid of both) was attacked. A **dynamic epoch adjustment strategy** further adapts the number of optimization steps based on the reconstruction error, ensuring efficient yet thorough purification. This approach has been shown to defend against encoder‑targeted attacks (e.g., PID), denoiser‑targeted attacks (e.g., Anti‑DreamBooth), and hybrid attacks (e.g., MIST) while preserving image quality【3】."
+}

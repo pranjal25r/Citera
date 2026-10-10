@@ -1,0 +1,12 @@
+{
+  "qid": "Q12",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can keyframes, sketches or depth maps be used to steer a video generator without fine-tuning the model?",
+  "context_ids": [
+    "2506.07177v2",
+    "2304.03373v2",
+    "2412.06029v1",
+    "2311.03226v1"
+  ],
+  "answer": "Keyframes, sketches, depth maps, or other frame‑level signals can be injected into a video diffusion model through **training‑free “frame guidance.”**  \nThe method works by processing the model’s latent representations (rather than the full high‑resolution frames) so that memory use stays low, and then applying a latent‑optimization step that forces the generated video to follow the provided signal while keeping global temporal coherence. Because the guidance operates only during sampling—modifying the latent codes according to the external signal—it does not require any fine‑tuning or additional training of the underlying video model, and it can be applied to any pre‑trained video diffusion network [1]."
+}

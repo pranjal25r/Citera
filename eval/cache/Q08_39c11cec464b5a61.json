@@ -1,0 +1,12 @@
+{
+  "qid": "Q08",
+  "model": "openai/gpt-oss-120b",
+  "question": "Why might the usual stable reverse-sampling procedure be a poor fit when a diffusion model is used to cleanse attacked inputs, and what alternative sampling scheme adds more randomness?",
+  "context_ids": [
+    "2411.18956v1",
+    "2601.21868v2",
+    "2307.11118v1",
+    "2301.06871v1"
+  ],
+  "answer": "The standard reverse‑sampling procedures used in diffusion models (e.g., the original DDPM or DDIM samplers) are designed for stable image generation, not for purifying adversarially perturbed inputs; this stability can limit the model’s ability to remove adversarial noise. To address this, the authors propose a new “random sampling” scheme that draws samples from a random noisy space at each diffusion step, thereby injecting additional randomness and yielding stronger robustness against attacks【1】."
+}

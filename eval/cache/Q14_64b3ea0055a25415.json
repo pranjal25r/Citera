@@ -1,0 +1,12 @@
+{
+  "qid": "Q14",
+  "model": "openai/gpt-oss-120b",
+  "question": "According to an overview of diffusion-based video generation, what are the main open challenges for the field?",
+  "context_ids": [
+    "2405.03150v2",
+    "2506.07177v2",
+    "2402.13144v3",
+    "2405.11473v4"
+  ],
+  "answer": "The survey notes that the field still faces significant hurdles, chiefly:\n\n* **Generating longer videos** – current methods struggle to maintain quality and coherence over extended durations.  \n* **Managing computational costs** – the large memory and processing requirements of video diffusion models remain a major obstacle.  \n\nThese are identified as the main open challenges for diffusion‑based video generation【1】."
+}

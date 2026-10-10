@@ -1,0 +1,12 @@
+{
+  "qid": "Q32",
+  "model": "openai/gpt-oss-120b",
+  "question": "In a masked diffusion language model, how can the unconditional branch of guidance be built dynamically from the tokens the model is least sure about?",
+  "context_ids": [
+    "2505.20199v1",
+    "2507.08965v2",
+    "2506.10036v2",
+    "2304.04746v1"
+  ],
+  "answer": "In a masked‑diffusion language model, the unconditional branch of classifier‑free guidance can be constructed on‑the‑fly by first identifying the tokens for which the model’s predictive confidence is low at the current sampling step. Those low‑confidence tokens are then temporarily re‑masked, creating a localized “unconditional” version of the current sequence. The guidance signal is computed by comparing the conditional prediction (with the original mask) to this dynamically generated unconditional prediction, so that CFG’s corrective influence is focused precisely on the ambiguous tokens [1]."
+}

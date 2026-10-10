@@ -1,0 +1,12 @@
+{
+  "qid": "O01",
+  "model": "openai/gpt-oss-120b",
+  "question": "What is the boiling point of water at the summit of Mount Everest?",
+  "context_ids": [
+    "2402.09970v2",
+    "2509.22728v2",
+    "2205.10120v7",
+    "2508.10688v2"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

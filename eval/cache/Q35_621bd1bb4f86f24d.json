@@ -1,0 +1,12 @@
+{
+  "qid": "Q35",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can a language model decide, during decoding, when to reason in continuous hidden representations instead of writing out intermediate steps, and how much compute to spend on it?",
+  "context_ids": [
+    "2606.16360v1",
+    "2601.22468v1",
+    "2304.04746v1",
+    "2212.11685v2"
+  ],
+  "answer": "Tyler solves this by learning a decoding‑time policy that, at every generation step, chooses between emitting a plain text token and invoking a latent‑reasoning operator.  The policy is trained to predict **when** to switch to a continuous‑representation module (e.g., for global planning, local state updates, or reusable procedural abstraction), **what** type of latent computation to run, and **how much** budget to allocate to that computation (i.e., how many latent steps to perform before returning to token output).  By making these decisions jointly and budget‑aware, the model can dynamically decide when to reason in hidden space and how much compute to spend on it during autoregressive decoding【1】."
+}

@@ -1,0 +1,327 @@
+{
+  "seed": 42,
+  "n_clusters": 8,
+  "per_cluster": 5,
+  "papers": [
+    {
+      "paper_index": 1,
+      "id": "2311.00938v1",
+      "title": "Bridging the Gap: Addressing Discrepancies in Diffusion Model Training for Classifier-Free Guidance",
+      "cluster": 0,
+      "cluster_size": 35,
+      "cluster_terms": "guidance, cfg, classifier, classifier free, free, free guidance"
+    },
+    {
+      "paper_index": 10,
+      "id": "2502.12154v1",
+      "title": "Diffusion Models without Classifier-free Guidance",
+      "cluster": 0,
+      "cluster_size": 35,
+      "cluster_terms": "guidance, cfg, classifier, classifier free, free, free guidance"
+    },
+    {
+      "paper_index": 23,
+      "id": "2509.22007v2",
+      "title": "Stage-wise Dynamics of Classifier-Free Guidance in Diffusion Models",
+      "cluster": 0,
+      "cluster_size": 35,
+      "cluster_terms": "guidance, cfg, classifier, classifier free, free, free guidance"
+    },
+    {
+      "paper_index": 24,
+      "id": "2507.08965v2",
+      "title": "Improving Classifier-Free Guidance in Masked Diffusion: Low-Dim Theoretical Insights with High-Dim Impact",
+      "cluster": 0,
+      "cluster_size": 35,
+      "cluster_terms": "guidance, cfg, classifier, classifier free, free, free guidance"
+    },
+    {
+      "paper_index": 26,
+      "id": "2406.08070v2",
+      "title": "CFG++: Manifold-constrained Classifier Free Guidance for Diffusion Models",
+      "cluster": 0,
+      "cluster_size": 35,
+      "cluster_terms": "guidance, cfg, classifier, classifier free, free, free guidance"
+    },
+    {
+      "paper_index": 111,
+      "id": "2301.06871v1",
+      "title": "Denoising Diffusion Probabilistic Models as a Defense against Adversarial Attacks",
+      "cluster": 1,
+      "cluster_size": 40,
+      "cluster_terms": "score, generative, score based, adversarial, generative models, based generative"
+    },
+    {
+      "paper_index": 122,
+      "id": "2601.07253v1",
+      "title": "Universal Adversarial Purification with DDIM Metric Loss for Stable Diffusion",
+      "cluster": 1,
+      "cluster_size": 40,
+      "cluster_terms": "score, generative, score based, adversarial, generative models, based generative"
+    },
+    {
+      "paper_index": 139,
+      "id": "2411.18956v1",
+      "title": "Random Sampling for Diffusion-based Adversarial Purification",
+      "cluster": 1,
+      "cluster_size": 40,
+      "cluster_terms": "score, generative, score based, adversarial, generative models, based generative"
+    },
+    {
+      "paper_index": 220,
+      "id": "2505.23309v1",
+      "title": "Score-based Generative Modeling for Conditional Independence Testing",
+      "cluster": 1,
+      "cluster_size": 40,
+      "cluster_terms": "score, generative, score based, adversarial, generative models, based generative"
+    },
+    {
+      "paper_index": 257,
+      "id": "2405.12223v3",
+      "title": "Cascaded Multi-path Shortcut Diffusion Model for Medical Image Translation",
+      "cluster": 1,
+      "cluster_size": 40,
+      "cluster_terms": "score, generative, score based, adversarial, generative models, based generative"
+    },
+    {
+      "paper_index": 15,
+      "id": "2210.08942v2",
+      "title": "Meta-Learning via Classifier(-free) Diffusion Guidance",
+      "cluster": 2,
+      "cluster_size": 52,
+      "cluster_terms": "text, diffusion models, video, latent, generation, guidance"
+    },
+    {
+      "paper_index": 19,
+      "id": "2506.07177v2",
+      "title": "Frame Guidance: Training-Free Guidance for Frame-Level Control in Video Diffusion Models",
+      "cluster": 2,
+      "cluster_size": 52,
+      "cluster_terms": "text, diffusion models, video, latent, generation, guidance"
+    },
+    {
+      "paper_index": 38,
+      "id": "2406.05965v1",
+      "title": "MakeSinger: A Semi-Supervised Training Method for Data-Efficient Singing Voice Synthesis via Classifier-free Diffusion Guidance",
+      "cluster": 2,
+      "cluster_size": 52,
+      "cluster_terms": "text, diffusion models, video, latent, generation, guidance"
+    },
+    {
+      "paper_index": 62,
+      "id": "2405.03150v2",
+      "title": "Video Diffusion Models: A Survey",
+      "cluster": 2,
+      "cluster_size": 52,
+      "cluster_terms": "text, diffusion models, video, latent, generation, guidance"
+    },
+    {
+      "paper_index": 138,
+      "id": "2303.09295v1",
+      "title": "DIRE for Diffusion-Generated Image Detection",
+      "cluster": 2,
+      "cluster_size": 52,
+      "cluster_terms": "text, diffusion models, video, latent, generation, guidance"
+    },
+    {
+      "paper_index": 53,
+      "id": "2605.22586v3",
+      "title": "A Tutorial on Diffusion Theory: From Differential Equations to Diffusion Models",
+      "cluster": 3,
+      "cluster_size": 60,
+      "cluster_terms": "denoising, sampling, noise, score, probabilistic, generative"
+    },
+    {
+      "paper_index": 93,
+      "id": "2102.09672v1",
+      "title": "Improved Denoising Diffusion Probabilistic Models",
+      "cluster": 3,
+      "cluster_size": 60,
+      "cluster_terms": "denoising, sampling, noise, score, probabilistic, generative"
+    },
+    {
+      "paper_index": 129,
+      "id": "2408.07285v1",
+      "title": "DDIM Redux: Mathematical Foundation and Some Extension",
+      "cluster": 3,
+      "cluster_size": 60,
+      "cluster_terms": "denoising, sampling, noise, score, probabilistic, generative"
+    },
+    {
+      "paper_index": 134,
+      "id": "2402.09970v2",
+      "title": "Accelerating Parallel Sampling of Diffusion Models",
+      "cluster": 3,
+      "cluster_size": 60,
+      "cluster_terms": "denoising, sampling, noise, score, probabilistic, generative"
+    },
+    {
+      "paper_index": 147,
+      "id": "2410.19288v1",
+      "title": "A Flow-based Truncated Denoising Diffusion Model for Super-resolution Magnetic Resonance Spectroscopic Imaging",
+      "cluster": 3,
+      "cluster_size": 60,
+      "cluster_terms": "denoising, sampling, noise, score, probabilistic, generative"
+    },
+    {
+      "paper_index": 155,
+      "id": "1912.05189v2",
+      "title": "BINet: a binary inpainting network for deep patch-based image compression",
+      "cluster": 4,
+      "cluster_size": 42,
+      "cluster_terms": "registration, images, learning, deep, synthesis, transformer"
+    },
+    {
+      "paper_index": 157,
+      "id": "2506.06962v3",
+      "title": "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+      "cluster": 4,
+      "cluster_size": 42,
+      "cluster_terms": "registration, images, learning, deep, synthesis, transformer"
+    },
+    {
+      "paper_index": 175,
+      "id": "1908.09287v1",
+      "title": "Principal Component Analysis Using Structural Similarity Index for Images",
+      "cluster": 4,
+      "cluster_size": 42,
+      "cluster_terms": "registration, images, learning, deep, synthesis, transformer"
+    },
+    {
+      "paper_index": 254,
+      "id": "1910.06072v5",
+      "title": "Light Field Synthesis by Training Deep Network in the Refocused Image Domain",
+      "cluster": 4,
+      "cluster_size": 42,
+      "cluster_terms": "registration, images, learning, deep, synthesis, transformer"
+    },
+    {
+      "paper_index": 273,
+      "id": "2502.01522v2",
+      "title": "Unpaired Deblurring via Decoupled Diffusion Model",
+      "cluster": 4,
+      "cluster_size": 42,
+      "cluster_terms": "registration, images, learning, deep, synthesis, transformer"
+    },
+    {
+      "paper_index": 8,
+      "id": "2306.05414v3",
+      "title": "Improving Tuning-Free Real Image Editing with Proximal Guidance",
+      "cluster": 5,
+      "cluster_size": 32,
+      "cluster_terms": "text, editing, text image, generation, images, image generation"
+    },
+    {
+      "paper_index": 181,
+      "id": "2206.01714v6",
+      "title": "Compositional Visual Generation with Composable Diffusion Models",
+      "cluster": 5,
+      "cluster_size": 32,
+      "cluster_terms": "text, editing, text image, generation, images, image generation"
+    },
+    {
+      "paper_index": 229,
+      "id": "2307.04859v1",
+      "title": "Articulated 3D Head Avatar Generation using Text-to-Image Diffusion Models",
+      "cluster": 5,
+      "cluster_size": 32,
+      "cluster_terms": "text, editing, text image, generation, images, image generation"
+    },
+    {
+      "paper_index": 240,
+      "id": "2407.21032v1",
+      "title": "Safeguard Text-to-Image Diffusion Models with Human Feedback Inversion",
+      "cluster": 5,
+      "cluster_size": 32,
+      "cluster_terms": "text, editing, text image, generation, images, image generation"
+    },
+    {
+      "paper_index": 245,
+      "id": "2306.09274v1",
+      "title": "Conditional Human Sketch Synthesis with Explicit Abstraction Control",
+      "cluster": 5,
+      "cluster_size": 32,
+      "cluster_terms": "text, editing, text image, generation, images, image generation"
+    },
+    {
+      "paper_index": 30,
+      "id": "2412.06846v1",
+      "title": "Classifier-free guidance in LLMs Safety",
+      "cluster": 6,
+      "cluster_size": 16,
+      "cluster_terms": "causal, guidance, latent, classifier, free guidance, classifier free"
+    },
+    {
+      "paper_index": 36,
+      "id": "2505.20199v1",
+      "title": "Adaptive Classifier-Free Guidance via Dynamic Low-Confidence Masking",
+      "cluster": 6,
+      "cluster_size": 16,
+      "cluster_terms": "causal, guidance, latent, classifier, free guidance, classifier free"
+    },
+    {
+      "paper_index": 52,
+      "id": "2606.13295v2",
+      "title": "Simultaneous Latent Budget Trees for Stratified Classification",
+      "cluster": 6,
+      "cluster_size": 16,
+      "cluster_terms": "causal, guidance, latent, classifier, free guidance, classifier free"
+    },
+    {
+      "paper_index": 55,
+      "id": "2512.24102v1",
+      "title": "Autoregressivity in the Latent Space of a GP-VAE Language Model: An Empirical Ablation Study",
+      "cluster": 6,
+      "cluster_size": 16,
+      "cluster_terms": "causal, guidance, latent, classifier, free guidance, classifier free"
+    },
+    {
+      "paper_index": 78,
+      "id": "2606.16360v1",
+      "title": "Tyler: Typed Latent Reasoning for Language Models -- When to Think, What to Compute, and How Much to Allocate",
+      "cluster": 6,
+      "cluster_size": 16,
+      "cluster_terms": "causal, guidance, latent, classifier, free guidance, classifier free"
+    },
+    {
+      "paper_index": 40,
+      "id": "2603.29727v2",
+      "title": "Latent-Y: A Lab-Validated Autonomous Agent for De Novo Drug Design",
+      "cluster": 7,
+      "cluster_size": 27,
+      "cluster_terms": "policy, guidance, probabilistic, sampling, trajectory, target"
+    },
+    {
+      "paper_index": 41,
+      "id": "2507.19375v1",
+      "title": "Latent-X: An Atom-level Frontier Model for De Novo Protein Binder Design",
+      "cluster": 7,
+      "cluster_size": 27,
+      "cluster_terms": "policy, guidance, probabilistic, sampling, trajectory, target"
+    },
+    {
+      "paper_index": 98,
+      "id": "0405062v1",
+      "title": "Efficiency Enhancement of Probabilistic Model Building Genetic Algorithms",
+      "cluster": 7,
+      "cluster_size": 27,
+      "cluster_terms": "policy, guidance, probabilistic, sampling, trajectory, target"
+    },
+    {
+      "paper_index": 104,
+      "id": "2306.15512v1",
+      "title": "Trajectory Generation, Control, and Safety with Denoising Diffusion Probabilistic Models",
+      "cluster": 7,
+      "cluster_size": 27,
+      "cluster_terms": "policy, guidance, probabilistic, sampling, trajectory, target"
+    },
+    {
+      "paper_index": 207,
+      "id": "2508.02117v1",
+      "title": "Scoring ISAC: Benchmarking Integrated Sensing and Communications via Score-Based Generative Modeling",
+      "cluster": 7,
+      "cluster_size": 27,
+      "cluster_terms": "policy, guidance, probabilistic, sampling, trajectory, target"
+    }
+  ]
+}

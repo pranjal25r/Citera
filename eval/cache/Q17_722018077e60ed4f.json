@@ -1,0 +1,12 @@
+{
+  "qid": "Q17",
+  "model": "openai/gpt-oss-120b",
+  "question": "What is gained by learning the variances of the reverse process instead of fixing them, in terms of the number of network evaluations needed for sampling?",
+  "context_ids": [
+    "2102.09672v1",
+    "2601.21868v2",
+    "2312.02246v4",
+    "2108.06084v4"
+  ],
+  "answer": "Learning the variances of the reverse diffusion process lets you sample with roughly an order‑of‑magnitude fewer forward passes (i.e., about ten times fewer network evaluations) while keeping sample quality essentially unchanged【1】."
+}

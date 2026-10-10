@@ -1,0 +1,12 @@
+{
+  "qid": "O03",
+  "model": "openai/gpt-oss-120b",
+  "question": "How should I prune a tomato plant to get more fruit?",
+  "context_ids": [
+    "2511.09180v1",
+    "2304.07087v1",
+    "2409.10494v1",
+    "1912.05189v2"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

@@ -1,0 +1,1817 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "questions": {
+    "answerable": 40,
+    "unanswerable": 12,
+    "dropped_in_review": []
+  },
+  "retrieval_gold_in_the_4_papers": {
+    "simple_search_dense_top4": {
+      "found": 37,
+      "n": 40
+    },
+    "app_pipeline_rerank_top4": {
+      "found": 38,
+      "n": 40
+    },
+    "reranking_fixed": {
+      "count": 3,
+      "n": 40,
+      "ids": [
+        "Q07",
+        "Q17",
+        "Q31"
+      ]
+    },
+    "reranking_broke": {
+      "count": 2,
+      "n": 40,
+      "ids": [
+        "Q04",
+        "Q23"
+      ]
+    },
+    "reranking_unchanged": {
+      "count": 35,
+      "n": 40
+    },
+    "missed_by_both": []
+  },
+  "answers_app_pipeline": {
+    "answerable": {
+      "answered": 39,
+      "refused": 1,
+      "n": 40,
+      "refused_ids": [
+        "Q04"
+      ]
+    },
+    "unanswerable": {
+      "refused": 12,
+      "n": 12,
+      "off_topic": {
+        "refused": 6,
+        "n": 6,
+        "answered_ids": []
+      },
+      "near_miss": {
+        "refused": 6,
+        "n": 6,
+        "answered_ids": []
+      }
+    },
+    "citations": {
+      "answers_given": 39,
+      "cite_only_1_to_4": 39,
+      "no_citation_at_all": 0,
+      "cite_a_number_outside_1_to_4": 0,
+      "format_[n]_only": 10,
+      "format_【n】_only": 29,
+      "format_mixed": 0,
+      "n": 39
+    }
+  },
+  "per_question": {
+    "retrieval": [
+      {
+        "qid": "Q01",
+        "gold": "2311.00938v1",
+        "simple_top4": [
+          "2311.00938v1",
+          "2603.08155v3",
+          "2507.08965v2",
+          "2509.22007v2"
+        ],
+        "app_top4": [
+          "2311.00938v1",
+          "2509.22007v2",
+          "2407.02687v2",
+          "2512.17303v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q02",
+        "gold": "2502.12154v1",
+        "simple_top4": [
+          "2407.02687v2",
+          "2207.12598v1",
+          "2310.05264v5",
+          "2502.12154v1"
+        ],
+        "app_top4": [
+          "2407.02687v2",
+          "2207.12598v1",
+          "2502.12154v1",
+          "2505.21101v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q03",
+        "gold": "2509.22007v2",
+        "simple_top4": [
+          "2509.22007v2",
+          "2505.21101v1",
+          "2408.09000v2",
+          "2311.00938v1"
+        ],
+        "app_top4": [
+          "2509.22007v2",
+          "2505.21101v1",
+          "2511.05844v3",
+          "2605.28036v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q04",
+        "gold": "2507.08965v2",
+        "simple_top4": [
+          "2311.00938v1",
+          "2509.22007v2",
+          "2507.08965v2",
+          "2404.07724v2"
+        ],
+        "app_top4": [
+          "2512.17303v1",
+          "2510.11057v1",
+          "2311.00938v1",
+          "2505.20199v1"
+        ],
+        "simple_hit": true,
+        "app_hit": false
+      },
+      {
+        "qid": "Q05",
+        "gold": "2406.08070v2",
+        "simple_top4": [
+          "2401.03221v1",
+          "2406.08070v2",
+          "2306.05414v3",
+          "2505.09571v1"
+        ],
+        "app_top4": [
+          "2406.08070v2",
+          "2301.11558v1",
+          "2507.18654v2",
+          "2506.24108v3"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q06",
+        "gold": "2301.06871v1",
+        "simple_top4": [
+          "2301.06871v1",
+          "2406.17399v1",
+          "2402.02316v4",
+          "2411.16738v2"
+        ],
+        "app_top4": [
+          "2301.06871v1",
+          "2403.17377v2",
+          "2111.06399v1",
+          "2411.16738v2"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q07",
+        "gold": "2601.07253v1",
+        "simple_top4": [
+          "2411.18956v1",
+          "2301.06871v1",
+          "2306.05720v2",
+          "2210.12254v2"
+        ],
+        "app_top4": [
+          "2401.03221v1",
+          "2404.06666v3",
+          "2601.07253v1",
+          "2407.21032v1"
+        ],
+        "simple_hit": false,
+        "app_hit": true
+      },
+      {
+        "qid": "Q08",
+        "gold": "2411.18956v1",
+        "simple_top4": [
+          "2605.06831v2",
+          "2411.18956v1",
+          "2402.05098v4",
+          "2402.07211v2"
+        ],
+        "app_top4": [
+          "2411.18956v1",
+          "2601.21868v2",
+          "2307.11118v1",
+          "2301.06871v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q09",
+        "gold": "2505.23309v1",
+        "simple_top4": [
+          "2505.23309v1",
+          "2102.09672v1",
+          "2507.04794v1",
+          "2305.16150v3"
+        ],
+        "app_top4": [
+          "2505.23309v1",
+          "2203.04698v1",
+          "2211.01364v3",
+          "2311.09952v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q10",
+        "gold": "2405.12223v3",
+        "simple_top4": [
+          "2405.12223v3",
+          "2311.04552v1",
+          "2305.16150v3",
+          "2206.02262v4"
+        ],
+        "app_top4": [
+          "2405.12223v3",
+          "2206.02262v4",
+          "2311.04552v1",
+          "2102.09672v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q11",
+        "gold": "2210.08942v2",
+        "simple_top4": [
+          "2210.08942v2",
+          "2212.00006v1",
+          "2402.13144v3",
+          "2312.08195v2"
+        ],
+        "app_top4": [
+          "2210.08942v2",
+          "2402.13144v3",
+          "2206.01714v6",
+          "2304.09116v3"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q12",
+        "gold": "2506.07177v2",
+        "simple_top4": [
+          "2506.07177v2",
+          "2311.03226v1",
+          "2506.10005v1",
+          "2412.06029v1"
+        ],
+        "app_top4": [
+          "2506.07177v2",
+          "2304.03373v2",
+          "2412.06029v1",
+          "2311.03226v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q13",
+        "gold": "2406.05965v1",
+        "simple_top4": [
+          "2406.05965v1",
+          "2304.09116v3",
+          "2510.11057v1",
+          "2509.22728v2"
+        ],
+        "app_top4": [
+          "2406.05965v1",
+          "2304.09116v3",
+          "2308.14319v1",
+          "2404.01709v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q14",
+        "gold": "2405.03150v2",
+        "simple_top4": [
+          "2405.03150v2",
+          "2411.18664v1",
+          "2506.07177v2",
+          "2404.01709v1"
+        ],
+        "app_top4": [
+          "2405.03150v2",
+          "2506.07177v2",
+          "2402.13144v3",
+          "2405.11473v4"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q15",
+        "gold": "2303.09295v1",
+        "simple_top4": [
+          "2303.09295v1",
+          "2303.02490v2",
+          "2306.05720v2",
+          "2404.07724v2"
+        ],
+        "app_top4": [
+          "2303.09295v1",
+          "2303.02490v2",
+          "2404.01709v1",
+          "2206.01714v6"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q16",
+        "gold": "2605.22586v3",
+        "simple_top4": [
+          "2605.22586v3",
+          "2011.13456v2",
+          "2408.07285v1",
+          "2302.04411v1"
+        ],
+        "app_top4": [
+          "2605.22586v3",
+          "2504.18130v3",
+          "2212.03325v1",
+          "2208.05003v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q17",
+        "gold": "2102.09672v1",
+        "simple_top4": [
+          "2601.21868v2",
+          "2310.05264v5",
+          "2605.30330v1",
+          "2506.06185v2"
+        ],
+        "app_top4": [
+          "2102.09672v1",
+          "2601.21868v2",
+          "2312.02246v4",
+          "2108.06084v4"
+        ],
+        "simple_hit": false,
+        "app_hit": true
+      },
+      {
+        "qid": "Q18",
+        "gold": "2408.07285v1",
+        "simple_top4": [
+          "2408.07285v1",
+          "2511.09180v1",
+          "2402.07211v2",
+          "2211.01364v3"
+        ],
+        "app_top4": [
+          "2408.07285v1",
+          "2504.18130v3",
+          "2605.06831v2",
+          "1706.09163v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q19",
+        "gold": "2402.09970v2",
+        "simple_top4": [
+          "2402.09970v2",
+          "2511.09180v1",
+          "2507.18654v2",
+          "2603.28572v1"
+        ],
+        "app_top4": [
+          "2402.09970v2",
+          "2511.09180v1",
+          "2402.19455v2",
+          "2507.18654v2"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q20",
+        "gold": "2410.19288v1",
+        "simple_top4": [
+          "2410.19288v1",
+          "2411.17203v1",
+          "2510.17851v1",
+          "2509.17790v1"
+        ],
+        "app_top4": [
+          "2410.19288v1",
+          "2411.17203v1",
+          "2410.11511v1",
+          "2510.17851v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q21",
+        "gold": "1912.05189v2",
+        "simple_top4": [
+          "1912.05189v2",
+          "2304.07087v1",
+          "2506.06962v3",
+          "2009.06912v1"
+        ],
+        "app_top4": [
+          "1912.05189v2",
+          "2506.06962v3",
+          "2009.06912v1",
+          "2304.07087v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q22",
+        "gold": "2506.06962v3",
+        "simple_top4": [
+          "2506.06962v3",
+          "2501.13926v2",
+          "2304.07087v1",
+          "2401.03221v1"
+        ],
+        "app_top4": [
+          "2506.06962v3",
+          "2304.07087v1",
+          "1912.05189v2",
+          "2406.01388v3"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q23",
+        "gold": "1908.09287v1",
+        "simple_top4": [
+          "1908.09288v1",
+          "1908.09287v1",
+          "2009.06912v1",
+          "2306.05720v2"
+        ],
+        "app_top4": [
+          "1908.09288v1",
+          "1910.06072v5",
+          "2009.06912v1",
+          "2501.01423v3"
+        ],
+        "simple_hit": true,
+        "app_hit": false
+      },
+      {
+        "qid": "Q24",
+        "gold": "1910.06072v5",
+        "simple_top4": [
+          "1910.06072v5",
+          "2201.02625v3",
+          "2306.05720v2",
+          "2201.00466v2"
+        ],
+        "app_top4": [
+          "1910.06072v5",
+          "2508.10688v2",
+          "2110.15678v3",
+          "2605.30330v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q25",
+        "gold": "2502.01522v2",
+        "simple_top4": [
+          "2502.01522v2",
+          "2503.08434v5",
+          "2409.19365v3",
+          "2210.00939v6"
+        ],
+        "app_top4": [
+          "2502.01522v2",
+          "2104.05358v1",
+          "2503.08434v5",
+          "2312.02156v2"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q26",
+        "gold": "2306.05414v3",
+        "simple_top4": [
+          "2507.18654v2",
+          "2401.03221v1",
+          "2306.05414v3",
+          "2404.01709v1"
+        ],
+        "app_top4": [
+          "2306.05414v3",
+          "2411.18664v1",
+          "2312.07586v5",
+          "2505.09571v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q27",
+        "gold": "2206.01714v6",
+        "simple_top4": [
+          "2206.01714v6",
+          "2303.02490v2",
+          "2403.04279v2",
+          "2111.13606v1"
+        ],
+        "app_top4": [
+          "2206.01714v6",
+          "2504.16080v1",
+          "2303.09295v1",
+          "2402.13144v3"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q28",
+        "gold": "2307.04859v1",
+        "simple_top4": [
+          "2307.04859v1",
+          "2409.03718v1",
+          "2305.16223v2",
+          "2403.04279v2"
+        ],
+        "app_top4": [
+          "2307.04859v1",
+          "2401.03221v1",
+          "2305.16223v2",
+          "2508.21032v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q29",
+        "gold": "2407.21032v1",
+        "simple_top4": [
+          "2407.21032v1",
+          "2311.13619v1",
+          "2404.06666v3",
+          "2411.05706v1"
+        ],
+        "app_top4": [
+          "2407.21032v1",
+          "2411.05706v1",
+          "2404.06666v3",
+          "2412.20800v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q30",
+        "gold": "2306.09274v1",
+        "simple_top4": [
+          "2306.09274v1",
+          "2510.16223v1",
+          "2303.02490v2",
+          "2302.04411v1"
+        ],
+        "app_top4": [
+          "2306.09274v1",
+          "2304.03373v2",
+          "2504.20754v1",
+          "2503.21943v2"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q31",
+        "gold": "2412.06846v1",
+        "simple_top4": [
+          "2602.07546v1",
+          "2505.20199v1",
+          "2606.16360v1",
+          "2310.05264v5"
+        ],
+        "app_top4": [
+          "2412.06846v1",
+          "2602.07546v1",
+          "2509.22728v2",
+          "2606.16360v1"
+        ],
+        "simple_hit": false,
+        "app_hit": true
+      },
+      {
+        "qid": "Q32",
+        "gold": "2505.20199v1",
+        "simple_top4": [
+          "2505.20199v1",
+          "2506.10036v2",
+          "2603.08155v3",
+          "2509.22007v2"
+        ],
+        "app_top4": [
+          "2505.20199v1",
+          "2507.08965v2",
+          "2506.10036v2",
+          "2304.04746v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q33",
+        "gold": "2606.13295v2",
+        "simple_top4": [
+          "2606.13295v2",
+          "2603.08155v3",
+          "2507.08965v2",
+          "2001.04197v4"
+        ],
+        "app_top4": [
+          "2606.13295v2",
+          "2001.04197v4",
+          "2502.17100v4",
+          "2412.10193v3"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q34",
+        "gold": "2512.24102v1",
+        "simple_top4": [
+          "2512.24102v1",
+          "2601.21868v2",
+          "2602.07546v1",
+          "2108.06084v4"
+        ],
+        "app_top4": [
+          "2512.24102v1",
+          "2108.06084v4",
+          "2304.04746v1",
+          "2601.21868v2"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q35",
+        "gold": "2606.16360v1",
+        "simple_top4": [
+          "2606.16360v1",
+          "2512.24102v1",
+          "2304.04746v1",
+          "2602.07546v1"
+        ],
+        "app_top4": [
+          "2606.16360v1",
+          "2601.22468v1",
+          "2304.04746v1",
+          "2212.11685v2"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q36",
+        "gold": "2603.29727v2",
+        "simple_top4": [
+          "2603.29727v2",
+          "2507.19375v1",
+          "2512.20263v1",
+          "2510.16223v1"
+        ],
+        "app_top4": [
+          "2603.29727v2",
+          "2507.19375v1",
+          "2512.20263v1",
+          "2402.13144v3"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q37",
+        "gold": "2507.19375v1",
+        "simple_top4": [
+          "2507.19375v1",
+          "2512.20263v1",
+          "2203.04698v1",
+          "2402.06079v2"
+        ],
+        "app_top4": [
+          "2507.19375v1",
+          "2512.20263v1",
+          "2202.02763v3",
+          "2603.29727v2"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q38",
+        "gold": "0405062v1",
+        "simple_top4": [
+          "0405062v1",
+          "2603.08155v3",
+          "2502.08808v2",
+          "2101.04525v2"
+        ],
+        "app_top4": [
+          "0405062v1",
+          "2101.04525v2",
+          "2502.17100v4",
+          "2306.15512v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q39",
+        "gold": "2306.15512v1",
+        "simple_top4": [
+          "2306.15512v1",
+          "2310.12609v4",
+          "2603.08155v3",
+          "2410.09945v2"
+        ],
+        "app_top4": [
+          "2306.15512v1",
+          "2401.05779v4",
+          "2310.12609v4",
+          "2301.06871v1"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      },
+      {
+        "qid": "Q40",
+        "gold": "2508.02117v1",
+        "simple_top4": [
+          "2508.02117v1",
+          "2309.08568v2",
+          "2506.21452v1",
+          "2507.05454v2"
+        ],
+        "app_top4": [
+          "2508.02117v1",
+          "2309.08568v2",
+          "2309.08688v1",
+          "2507.05454v2"
+        ],
+        "simple_hit": true,
+        "app_hit": true
+      }
+    ],
+    "answers": [
+      {
+        "qid": "Q01",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can changing the loss used at training time make a conditional diffusion model less sensitive to the guidance strength chosen at sampling time?",
+        "context_ids": [
+          "2311.00938v1",
+          "2509.22007v2",
+          "2407.02687v2",
+          "2512.17303v1"
+        ],
+        "answer": "Changing the loss function during training can align the model’s objective more closely with the way it will be used at sampling time.  By incorporating the effect of classifier‑free guidance directly into the training loss, the model learns to produce samples that remain high‑quality across a range of guidance scales instead of only when a specific scale is used.  This reduces the discrepancy between the training objective and the conditional sampling behavior, making the resulting conditional diffusion model far less sensitive to the exact guidance‑strength ( w ) chosen during inference [1].",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q02",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "Can a diffusion model be trained so that it no longer has to combine conditional and unconditional predictions at inference, and what does that do to inference speed?",
+        "context_ids": [
+          "2407.02687v2",
+          "2207.12598v1",
+          "2502.12154v1",
+          "2505.21101v1"
+        ],
+        "answer": "Yes.  According to the paper “Diffusion Models without Classifier‑free Guidance,” the authors introduce Model‑guidance (MG), an objective that eliminates the need for classifier‑free guidance at inference—i.e., the model no longer has to linearly combine conditional and unconditional predictions.  This change “significantly accelerates the training process, doubles the inference speed, and achieve[s] exceptional quality”【3】.",
+        "refused": false,
+        "cited": [
+          3
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q03",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "When the conditional distribution has several modes, what successive phases does guided sampling go through, and why does stronger guidance reduce diversity?",
+        "context_ids": [
+          "2509.22007v2",
+          "2505.21101v1",
+          "2511.05844v3",
+          "2605.28036v1"
+        ],
+        "answer": "When the conditional distribution is multimodal, guided sampling proceeds through three successive phases:\n\n1. **Direction‑Shift stage** – The guidance term pulls the trajectory quickly toward the weighted mean of the modes. This creates an initialization bias and causes the sample norm to grow.  \n2. **Mode‑Separation stage** – The local dynamics are largely neutral, but the bias inherited from the first stage preferentially suppresses weaker modes, so the global diversity of the sample set drops.  \n3. **Concentration stage** – Guidance now amplifies contraction inside each remaining mode, shrinking fine‑grained variability within a mode.\n\nBecause stronger guidance intensifies each of these effects—pushing more aggressively toward the mean, more strongly suppressing minor modes, and tightening the spread within the surviving modes—it inevitably reduces both global diversity (fewer modes represented) and intra‑mode diversity (less fine‑grained variation)【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q04",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "For generative models that work by progressively unmasking tokens, at what point in sampling does strong guidance hurt quality and at what point does it help?",
+        "context_ids": [
+          "2512.17303v1",
+          "2510.11057v1",
+          "2311.00938v1",
+          "2505.20199v1"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q05",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "What has been proposed as the underlying cause of poor invertibility and mode collapse in guided text-to-image sampling, and what fix follows from treating text conditioning as an inverse problem?",
+        "context_ids": [
+          "2406.08070v2",
+          "2301.11558v1",
+          "2507.18654v2",
+          "2506.24108v3"
+        ],
+        "answer": "The poor invertibility and mode‑collapse observed with guided text‑to‑image sampling have been attributed to the **off‑manifold phenomenon caused by classifier‑free guidance (CFG)** rather than to an inherent limitation of diffusion models themselves【1】.  \n\nBy **treating text conditioning as an inverse problem** and formulating it with a **text‑conditioned score‑matching loss**, the authors introduce a simple correction to CFG—named **CFG++**—which restores invertibility, reduces mode collapse, and improves sample quality【1】.",
+        "refused": false,
+        "cited": [
+          1,
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q06",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "Can noising and then denoising a maliciously perturbed histopathology image protect a classifier, and how much of the original accuracy is recovered?",
+        "context_ids": [
+          "2301.06871v1",
+          "2403.17377v2",
+          "2111.06399v1",
+          "2411.16738v2"
+        ],
+        "answer": "Yes. Adding noise to a maliciously perturbed histopathology image and then denoising it with a Denoising Diffusion Probabilistic Model can act as a purification step that protects the downstream classifier. In the reported experiments on the PatchCamelyon histopathology dataset, this approach recovered up to **88 % of the original (clean‑image) accuracy**【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q07",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can images poisoned to disrupt a latent text-to-image model be cleaned when the attack targets its encoder, its denoiser, or both?",
+        "context_ids": [
+          "2401.03221v1",
+          "2404.06666v3",
+          "2601.07253v1",
+          "2407.21032v1"
+        ],
+        "answer": "Images that have been poisoned to disrupt a latent text‑to‑image model—whether the adversarial perturbation is injected into the VAE encoder, the UNet denoiser, or both—can be cleaned by applying **Universal Diffusion Adversarial Purification (UDAP)**.  \nUDAP exploits the fact that clean and adversarial images behave differently during **DDIM inversion**. By running an inversion of the corrupted image with a **DDIM metric loss**, the method iteratively adjusts the latent code so that the reconstructed image follows the clean‑image reconstruction trajectory, effectively removing the adversarial noise regardless of which component (encoder, denoiser, or a hybrid of both) was attacked. A **dynamic epoch adjustment strategy** further adapts the number of optimization steps based on the reconstruction error, ensuring efficient yet thorough purification. This approach has been shown to defend against encoder‑targeted attacks (e.g., PID), denoiser‑targeted attacks (e.g., Anti‑DreamBooth), and hybrid attacks (e.g., MIST) while preserving image quality【3】.",
+        "refused": false,
+        "cited": [
+          3
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q08",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "Why might the usual stable reverse-sampling procedure be a poor fit when a diffusion model is used to cleanse attacked inputs, and what alternative sampling scheme adds more randomness?",
+        "context_ids": [
+          "2411.18956v1",
+          "2601.21868v2",
+          "2307.11118v1",
+          "2301.06871v1"
+        ],
+        "answer": "The standard reverse‑sampling procedures used in diffusion models (e.g., the original DDPM or DDIM samplers) are designed for stable image generation, not for purifying adversarially perturbed inputs; this stability can limit the model’s ability to remove adversarial noise. To address this, the authors propose a new “random sampling” scheme that draws samples from a random noisy space at each diffusion step, thereby injecting additional randomness and yielding stronger robustness against attacks【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q09",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can a generative model that learns gradients of log-densities be used to test whether two variables are independent given a third, while controlling the false-positive rate?",
+        "context_ids": [
+          "2505.23309v1",
+          "2203.04698v1",
+          "2211.01364v3",
+          "2311.09952v1"
+        ],
+        "answer": "A score‑based generative model learns an approximation of the gradient of the log‑density (the “score”) of a conditional distribution.  By first estimating the conditional score with a sliced conditional‑score‑matching procedure, one can run conditional Langevin dynamics to draw samples that follow the null‑hypothesis distribution \\(P_{X\\mid Z}\\) (and similarly for \\(Y\\mid Z\\)).  These synthetic samples represent what would be observed if \\(X\\) and \\(Y\\) were conditionally independent given \\(Z\\).  A goodness‑of‑fit test is then applied to compare the real joint data to the generated null data; because the samples are produced from the estimated conditional score, the test inherits precise Type‑I error (false‑positive) control.  In this way, the gradient‑based generative model provides a way to test conditional independence while accurately controlling the false‑positive rate【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q10",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can the output of a GAN serve as a starting point for a diffusion model that converts between medical imaging modalities and also reports uncertainty?",
+        "context_ids": [
+          "2405.12223v3",
+          "2206.02262v4",
+          "2311.04552v1",
+          "2102.09672v1"
+        ],
+        "answer": "The CMDM framework first runs a conditional GAN to synthesize an initial “prior” image in the target modality. This GAN‑generated image is then fed to a diffusion model, which performs the reverse diffusion (denoising) steps to refine the translation. Because the diffusion stage operates on a known prior, it can converge in far fewer iterations while still producing high‑quality modality‑to‑modality conversions. Moreover, CMDM’s multi‑path shortcut diffusion strategy propagates multiple diffusion trajectories, allowing the model to compute the variance across these paths and thereby estimate the uncertainty of each pixel’s translation. In this way, the GAN output acts as the starting point for the diffusion process, which both finalizes the medical‑image translation and provides uncertainty estimates that correlate with translation error【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q11",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "Can a natural-language description of a task be used to generate the parameters of a neural network for an unseen task without any fine-tuning?",
+        "context_ids": [
+          "2210.08942v2",
+          "2402.13144v3",
+          "2206.01714v6",
+          "2304.09116v3"
+        ],
+        "answer": "Yes. The proposed meta‑learning approach uses a natural‑language description of a task as guidance for a hypernetwork (via “HyperCLIP” classifier guidance or a conditional latent diffusion model) to directly generate neural‑network weights that are adapted to that unseen task, all in a zero‑shot manner without any further fine‑tuning [1].",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q12",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can keyframes, sketches or depth maps be used to steer a video generator without fine-tuning the model?",
+        "context_ids": [
+          "2506.07177v2",
+          "2304.03373v2",
+          "2412.06029v1",
+          "2311.03226v1"
+        ],
+        "answer": "Keyframes, sketches, depth maps, or other frame‑level signals can be injected into a video diffusion model through **training‑free “frame guidance.”**  \nThe method works by processing the model’s latent representations (rather than the full high‑resolution frames) so that memory use stays low, and then applying a latent‑optimization step that forces the generated video to follow the provided signal while keeping global temporal coherence. Because the guidance operates only during sampling—modifying the latent codes according to the external signal—it does not require any fine‑tuning or additional training of the underlying video model, and it can be applied to any pre‑trained video diffusion network [1].",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q13",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can a model that generates sung vocals be trained when most of the available audio has no aligned lyrics or pitch annotations?",
+        "context_ids": [
+          "2406.05965v1",
+          "2304.09116v3",
+          "2308.14319v1",
+          "2404.01709v1"
+        ],
+        "answer": "The model can be trained in a semi‑supervised way that does not require fully aligned text‑pitch‑audio triples.  MakeSinger learns from any speech or singing recordings regardless of whether they have lyrics or pitch labels by using classifier‑free diffusion guidance and a dual‑guidance mechanism that estimates the score of masked inputs during the reverse diffusion step.  This lets the model exploit large amounts of unlabeled audio and, when combined with a small set of labeled data (or even just TTS data), still produce high‑quality sung vocals without needing full alignment information for every training example【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q14",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "According to an overview of diffusion-based video generation, what are the main open challenges for the field?",
+        "context_ids": [
+          "2405.03150v2",
+          "2506.07177v2",
+          "2402.13144v3",
+          "2405.11473v4"
+        ],
+        "answer": "The survey notes that the field still faces significant hurdles, chiefly:\n\n* **Generating longer videos** – current methods struggle to maintain quality and coherence over extended durations.  \n* **Managing computational costs** – the large memory and processing requirements of video diffusion models remain a major obstacle.  \n\nThese are identified as the main open challenges for diffusion‑based video generation【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q15",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can a real photograph be told apart from a diffusion-generated one by looking at how well a pretrained model can reproduce the image?",
+        "context_ids": [
+          "2303.09295v1",
+          "2303.02490v2",
+          "2404.01709v1",
+          "2206.01714v6"
+        ],
+        "answer": "A pretrained diffusion model can be used to reconstruct any input image, and the reconstruction error – called DIffusion Reconstruction Error (DIRE) – reveals whether the image is real or synthetic.  Diffusion‑generated images are easily approximated by the model, so the reconstruction error is small, whereas real photographs cannot be faithfully reproduced and yield a larger error.  By measuring this error, one can distinguish real photographs from diffusion‑generated ones【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q16",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can the discrete-step probabilistic formulation, score-based SDEs, deterministic implicit samplers and flow matching all be explained within one differential-equation picture?",
+        "context_ids": [
+          "2605.22586v3",
+          "2504.18130v3",
+          "2212.03325v1",
+          "2208.05003v1"
+        ],
+        "answer": "All of these generative‑sampling schemes can be viewed as different ways of representing the same underlying differential‑equation dynamics that connect a simple prior distribution (e.g., Gaussian noise) to the data distribution.  \n\nStarting from a conditional Gaussian noising process, one can write the forward evolution as either an ordinary differential equation (ODE) or a stochastic differential equation (SDE).  The marginal forward dynamics give the distribution of the noisy data at any time t.  Reversing time yields a **reverse‑time SDE** whose drift involves the *score* ∇ log pₜ (the gradient of the log‑density of the noisy data).  By eliminating the stochastic term one obtains the **probability‑flow ODE**, which has the same marginal trajectories as the reverse SDE but is deterministic.  \n\n- **Score‑based SDEs** correspond to sampling with the reverse‑time SDE, using an estimated score function.  \n- **Deterministic implicit samplers** (e.g., DDIM, probability‑flow ODE solvers) are instances of the probability‑flow ODE, producing smooth, noise‑free trajectories.  \n- **Flow‑matching** methods directly parameterize a time‑dependent vector field that matches the forward and backward flows, which is mathematically equivalent to specifying the drift of the same ODE/SDE.  \n- The **discrete‑step probabilistic formulation** (e.g., DDPM) discretizes the reverse‑time SDE into a sequence of conditional Gaussian transitions, which is just a numerical scheme for solving the same continuous‑time reverse dynamics.\n\nThus, ODE and SDE formulations provide a single differential‑equation picture that unifies discrete probabilistic steps, score‑based SDE sampling, deterministic implicit samplers, and flow‑matching approaches【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q17",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "What is gained by learning the variances of the reverse process instead of fixing them, in terms of the number of network evaluations needed for sampling?",
+        "context_ids": [
+          "2102.09672v1",
+          "2601.21868v2",
+          "2312.02246v4",
+          "2108.06084v4"
+        ],
+        "answer": "Learning the variances of the reverse diffusion process lets you sample with roughly an order‑of‑magnitude fewer forward passes (i.e., about ten times fewer network evaluations) while keeping sample quality essentially unchanged【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q18",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "Which exact mathematical results have been derived for the generalized deterministic implicit sampler and for exponential-integrator solvers?",
+        "context_ids": [
+          "2408.07285v1",
+          "2504.18130v3",
+          "2605.06831v2",
+          "1706.09163v1"
+        ],
+        "answer": "The note derives two exact analytical formulas for the generalized deterministic implicit sampler (gDDIM) and also provides precise results for exponential‑integrator (EI) solvers:\n\n* **Generalized deterministic implicit sampler (gDDIM)** – an exact closed‑form expression for the reverse trajectory of the probability‑flow ODE and an exact formula for the covariance matrix of the gDDIM transition kernel are derived [1].\n\n* **Exponential‑integrator (EI) solvers** – an exact characterization of the EI scheme’s efficiency is obtained by analysing the change‑of‑variables that underlies the integrator, giving a precise mathematical understanding of why the EI method is effective [1].",
+        "refused": false,
+        "cited": [
+          1,
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q19",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "Can the normally sequential denoising steps be computed concurrently by posing sampling as a fixed-point problem, and how many steps does that save?",
+        "context_ids": [
+          "2402.09970v2",
+          "2511.09180v1",
+          "2402.19455v2",
+          "2507.18654v2"
+        ],
+        "answer": "Yes. By reformulating diffusion sampling as a fixed‑point problem (solving a system of triangular nonlinear equations), the normally sequential denoising steps can be computed in parallel. This parallel approach reduces the number of inference steps needed by roughly a factor of 4 to 14 compared with conventional sequential samplers such as DDIM or DDPM【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q20",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can the spatial resolution of metabolic imaging of brain tumour patients be increased with a shortened diffusion chain?",
+        "context_ids": [
+          "2410.19288v1",
+          "2411.17203v1",
+          "2410.11511v1",
+          "2510.17851v1"
+        ],
+        "answer": "The spatial resolution can be increased by using a **Flow‑based Truncated Denoising Diffusion Model (FTDDM)**. FTDDM shortens the diffusion chain by truncating the diffusion process and estimating the missing steps with a normal‑izing‑flow network. Because the diffusion steps are reduced, sampling is much faster, yet the model still learns to generate high‑resolution metabolic images from low‑resolution inputs, delivering sharper, more accurate super‑resolved MRSI of brain‑tumour patients【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q21",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can block artefacts be avoided when a learned image codec encodes each patch independently, while still allowing patches to be decoded in parallel?",
+        "context_ids": [
+          "1912.05189v2",
+          "2506.06962v3",
+          "2009.06912v1",
+          "2304.07087v1"
+        ],
+        "answer": "Block artefacts can be avoided by using a binary‑inpainting‑based decoder that also takes the binarised encodings of the surrounding patches as additional input.  In this scheme each patch is still encoded and decoded independently (so decoding can be done in parallel), but during reconstruction the decoder incorporates the binary codes of its neighbours to restore inter‑patch dependencies and thus suppress block artefacts【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q22",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can an image generator look up reference patches repeatedly as it generates, instead of retrieving whole reference images once at the start?",
+        "context_ids": [
+          "2506.06962v3",
+          "2304.07087v1",
+          "1912.05189v2",
+          "2406.01388v3"
+        ],
+        "answer": "An image generator can perform autoregressive patch‑level retrievals — at each generation step it uses the patches it has already produced as queries to fetch the most relevant reference patches, and then blends those retrieved patches into the next output.  By repeatedly looking up and incorporating patch‑wise visual references throughout the decoding process (instead of conditioning once on a fixed whole‑image reference), the model can adapt to the evolving context and avoid over‑copying or stylistic bias.  This approach is the core idea of Autoregressive Retrieval Augmentation (AR‑RAG) [1].",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q23",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can linear dimensionality reduction for images be redesigned to keep what people perceive as image quality, instead of minimising pixel-by-pixel error?",
+        "context_ids": [
+          "1908.09288v1",
+          "1910.06072v5",
+          "2009.06912v1",
+          "2501.01423v3"
+        ],
+        "answer": "Redesign linear dimensionality‑reduction for images by replacing the usual pixel‑wise error (e.g., MSE or an ℓ₂ norm) with a perceptual similarity measure that reflects how humans judge image quality.  \nFor example, the Locally Linear Image Structural Embedding (LLISE) method builds a manifold using the Structural Similarity Index (SSIM) instead of MSE, so the embedding preserves the structural features that humans perceive rather than minimizing pixel‑by‑pixel differences【1】.  \n\nThus, a perceptually‑guided reduction can be achieved by (1) defining the local linear reconstruction cost with SSIM (or other perceptual metrics) and (2) learning the embedding that best maintains those similarity scores, thereby keeping the perceived image quality while reducing dimensionality.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q24",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "When creating extra viewpoints from light-field camera data, why might it work better to measure training error on images combined from many views rather than on each view separately?",
+        "context_ids": [
+          "1910.06072v5",
+          "2508.10688v2",
+          "2110.15678v3",
+          "2605.30330v1"
+        ],
+        "answer": "Measuring the error on images that are formed by combining many views (e.g., refocused images) is more effective because the light‑field is ultimately perceived as a single integrated image rather than as a set of isolated viewpoints.  Traditional view‑synthesis losses that evaluate each view independently ignore how the synthesized views will behave when they are composited into a refocused picture, which can lead to artifacts that are not captured by per‑view metrics.  By training on a loss computed on the combined, refocused image (the “refocused image error”), the network is encouraged to produce a light field whose overall refocused quality is high, yielding better visual results than optimizing each view separately [1].",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q25",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can a diffusion-based method remove blur from images when no matched sharp and blurry training pairs exist for the target domain?",
+        "context_ids": [
+          "2502.01522v2",
+          "2104.05358v1",
+          "2503.08434v5",
+          "2312.02156v2"
+        ],
+        "answer": "A diffusion‑based method can still deblur images without any matched sharp‑blur pairs for the target domain by **decoupling the extraction of structural information from the blur patterns and training on unpaired data**.  \n\nIn UID‑Diff, two separate Q‑Former modules are trained: one to capture the image’s structural features and another to capture blur characteristics. The model is jointly optimized on three tasks:  \n\n1. **Supervised deblurring on synthetic paired data** – provides a basic deblurring capability.  \n2. **Unsupervised blur‑transfer using unpaired blurred images from the target domain** – the blur‑pattern extractor learns to model the unknown blur distribution directly from the target’s unpaired blurry images.  \n3. **A reconstruction task** that forces the structural and blur features to be complementary, ensuring that the structural branch retains scene content while the blur branch captures the degradation.  \n\nBy learning these disentangled representations, the diffusion process can “undo” the blur learned from the target domain even though no sharp–blur pairs are available for that domain, improving generalisation to unseen blur patterns【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q26",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "Reconstruction quality drops at large guidance scales when real photos are edited by inverting a deterministic sampler; how can a training-free negative-prompt approach be improved to reduce the resulting artifacts?",
+        "context_ids": [
+          "2306.05414v3",
+          "2411.18664v1",
+          "2312.07586v5",
+          "2505.09571v1"
+        ],
+        "answer": "The training‑free negative‑prompt inversion (NPI) can be made more reliable by adding two complementary enhancements:\n\n1. **Regularization of the negative‑prompt embeddings** – introduce a regularization term that keeps the optimized null embeddings close to their original values while still allowing them to correct the DDIM trajectory. This curbs the drift that normally produces artifacts at high classifier‑free guidance (CFG) scales.\n\n2. **Reconstruction‑guided refinement** – incorporate an explicit reconstruction guidance signal (e.g., a loss that penalizes differences between the forward‑generated image and the original photo) during the inversion. This guides the inverted path back toward the true image manifold, further suppressing the artifacts introduced by the plain NPI solution.\n\nBy combining the regularization term with reconstruction guidance, the negative‑prompt approach retains its training‑free, closed‑form nature while delivering cleaner, higher‑quality reconstructions even at large guidance scales【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q27",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can several diffusion models be combined at test time so that a generated image correctly binds attributes to objects and respects the relations in a complex prompt?",
+        "context_ids": [
+          "2206.01714v6",
+          "2504.16080v1",
+          "2303.09295v1",
+          "2402.13144v3"
+        ],
+        "answer": "The method composes multiple diffusion models by treating each model as an energy‑based component that defines its own data distribution.  \nAt test time the individual energy functions are added together, effectively merging the corresponding diffusion processes into a single joint diffusion that samples from the combined energy. Because each sub‑model is responsible for a specific visual component (e.g., an object, an attribute, or a relational constraint), the joint diffusion simultaneously satisfies all of them, which forces the generated image to bind the right attributes to the right objects and to honor the specified relations in the prompt. This composable‑diffusion approach enables the generation of scenes that are far more complex than any single model could produce while preserving correct attribute–object binding and relational structure【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q28",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can a text prompt be turned into an animatable 3D face by optimising a parametric head model with a 2D image diffusion prior?",
+        "context_ids": [
+          "2307.04859v1",
+          "2401.03221v1",
+          "2305.16223v2",
+          "2508.21032v1"
+        ],
+        "answer": "A text prompt is first fed to a pretrained 2‑D text‑to‑image diffusion model to obtain a diffusion prior that captures the visual appearance described by the prompt.  \nThat prior is then used as a supervisory signal while jointly optimizing the parameters of a parametric 3‑D morphable head model (3DMM).  \nSpecifically, the framework updates the 3DMM’s geometry (shape coefficients) and texture (appearance coefficients) so that renders of the evolving 3‑D head match the diffusion‑generated image features at multiple views.  During optimisation the 2‑D diffusion prior and the 3‑D facial features are kept aligned, ensuring that the resulting head maintains both the textual description and a plausible 3‑D structure.  Because the optimisation operates directly on the 3DMM, the final avatar inherits the model’s deformation rig and can be articulated (e.g., posed or animated) using the 3‑DMM’s articulation parameters.  This yields an animatable 3‑D face that faithfully reflects the original text prompt while leveraging the rich visual prior of a 2‑D diffusion model【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q29",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can people's judgments of generated images be turned into tokens that help remove harmful or copyrighted concepts from an image generator?",
+        "context_ids": [
+          "2407.21032v1",
+          "2411.05706v1",
+          "2404.06666v3",
+          "2412.20800v1"
+        ],
+        "answer": "The approach described in the paper “Safeguard Text‑to‑Image Diffusion Models with Human Feedback Inversion” shows how to turn people’s judgments into tokens that can be used to eliminate unwanted concepts.  After a model generates an image, human reviewers evaluate whether the image contains harmful or copyrighted material.  Their feedback is then **condensed into short textual tokens** (e.g., words or phrases that capture the objectionable concept).  These tokens are fed back into the diffusion model as guidance signals during training or inference, directing the model to suppress or remove the flagged concept.  By incorporating the human‑derived tokens through a self‑distillation‑based objective, the generator learns to avoid producing images that trigger the same negative judgments while preserving overall image quality【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q30",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can the number of points or strokes in generated free-hand drawings be controlled explicitly?",
+        "context_ids": [
+          "2306.09274v1",
+          "2304.03373v2",
+          "2504.20754v1",
+          "2503.21943v2"
+        ],
+        "answer": "The method introduces two explicit control mechanisms — **state embeddings** and a **stroke token** — that are fed into a transformer‑based latent diffusion model. By providing the model with the desired number of points (via state embeddings) or the desired number of strokes (via the stroke token), the synthesis process can be guided to produce free‑hand sketches with exactly the specified amount of point‑level or stroke‑level detail [1].",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q31",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can a large language model be made to forget information without a dataset of knowledge to keep, with guidance applied at inference?",
+        "context_ids": [
+          "2412.06846v1",
+          "2602.07546v1",
+          "2509.22728v2",
+          "2606.16360v1"
+        ],
+        "answer": "A large language model can be “unlearned” without needing a separate dataset of the knowledge to retain by training it directly on synthetic replacement data while using a classifier‑free‑guidance‑aware regime, and then applying the classifier‑free guidance (CFG) only at inference time. In practice this is done with the ORPO reinforcement‑learning method, which updates the model on the synthetic data (so no original “keep” dataset is required), and the same CFG mechanism is used during generation to steer the model away from the removed information without degrading overall performance【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q32",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "In a masked diffusion language model, how can the unconditional branch of guidance be built dynamically from the tokens the model is least sure about?",
+        "context_ids": [
+          "2505.20199v1",
+          "2507.08965v2",
+          "2506.10036v2",
+          "2304.04746v1"
+        ],
+        "answer": "In a masked‑diffusion language model, the unconditional branch of classifier‑free guidance can be constructed on‑the‑fly by first identifying the tokens for which the model’s predictive confidence is low at the current sampling step. Those low‑confidence tokens are then temporarily re‑masked, creating a localized “unconditional” version of the current sequence. The guidance signal is computed by comparing the conditional prediction (with the original mask) to this dynamically generated unconditional prediction, so that CFG’s corrective influence is focused precisely on the ambiguous tokens [1].",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q33",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can a decision tree be grown when the data are grouped by a control variable, such as sex or time, that may confound the outcome?",
+        "context_ids": [
+          "2606.13295v2",
+          "2001.04197v4",
+          "2502.17100v4",
+          "2412.10193v3"
+        ],
+        "answer": "When the observations are stratified by a control variable (e.g., sex, time, location) that could act as a confounder, the tree is grown with a **model‑based split rule** rather than the usual impurity‑based rule.  \nAt each parent node a **Simultaneous Latent Budget Model (or one of its constrained versions)** is fitted to the data for all levels of the control variable simultaneously. The model treats the child nodes as latent components of a mixture model:  \n\n* **Mixing parameters** determine how observations from each group (e.g., male vs. female, different time periods) are probabilistically assigned to the child nodes.  \n* **Latent‑budget parameters** describe the class‑distribution profile within each child node for each level of the control variable.  \n\nThe parameters are estimated by least‑squares (viewed through a neural‑network lens), and the resulting split is chosen because it best fits this simultaneous mixture model. By doing so, the tree explicitly accounts for the differing effects of the control variable on the outcome, avoiding bias that would arise from a naïve split that ignores the confounder. The resulting tree can be visualized with interpretation aids, and pruning/selection procedures are applied after the model‑based growth.  \n\nThus, a decision tree can be grown on grouped (potentially confounded) data by fitting a simultaneous latent‑budget mixture at each node and using its estimated parameters to define the split rule.  [1]",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q34",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "What happens to long-range stability when sequential dependence between latent variables is removed from a variational language model with a Gaussian-process prior?",
+        "context_ids": [
+          "2512.24102v1",
+          "2108.06084v4",
+          "2304.04746v1",
+          "2601.21868v2"
+        ],
+        "answer": "Removing the autoregressive dependence between latent variables degrades the latent structure and makes long‑range behavior unstable; the model exhibits unstable long‑range dynamics when the latent variables are independent【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q35",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can a language model decide, during decoding, when to reason in continuous hidden representations instead of writing out intermediate steps, and how much compute to spend on it?",
+        "context_ids": [
+          "2606.16360v1",
+          "2601.22468v1",
+          "2304.04746v1",
+          "2212.11685v2"
+        ],
+        "answer": "Tyler solves this by learning a decoding‑time policy that, at every generation step, chooses between emitting a plain text token and invoking a latent‑reasoning operator.  The policy is trained to predict **when** to switch to a continuous‑representation module (e.g., for global planning, local state updates, or reusable procedural abstraction), **what** type of latent computation to run, and **how much** budget to allocate to that computation (i.e., how many latent steps to perform before returning to token output).  By making these decisions jointly and budget‑aware, the model can dynamically decide when to reason in hidden space and how much compute to spend on it during autoregressive decoding【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q36",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "What success rate did an autonomous AI agent achieve at designing antibodies that were confirmed to bind in the lab, and how much faster were experts who used it?",
+        "context_ids": [
+          "2603.29727v2",
+          "2507.19375v1",
+          "2512.20263v1",
+          "2402.13144v3"
+        ],
+        "answer": "The autonomous AI agent (Latent‑Y) achieved a **67 % target‑level success rate** in producing laboratory‑confirmed antibody binders, and experts using the agent completed design campaigns **about 56 times faster** than independent expert time estimates【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q37",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "Which generative model jointly produces the full atomic structure and sequence of a binder for a given protein epitope, and what experimental hit rates did it reach?",
+        "context_ids": [
+          "2507.19375v1",
+          "2512.20263v1",
+          "2202.02763v3",
+          "2603.29727v2"
+        ],
+        "answer": "The model that jointly generates the full atomic structure and sequence of a binder for a given protein epitope is **Latent‑X**. In experimental tests on macro‑cyclic peptide targets, Latent‑X achieved **hit rates exceeding 90 %**【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q38",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can evolutionary optimisers that learn a probabilistic model of good solutions cut down on expensive fitness evaluations?",
+        "context_ids": [
+          "0405062v1",
+          "2101.04525v2",
+          "2502.17100v4",
+          "2306.15512v1"
+        ],
+        "answer": "Evolutionary optimisers that build a probabilistic model of promising solutions can dramatically lower the number of expensive fitness evaluations by using the model to *estimate* fitness instead of actually evaluating every offspring.  \nIn the described approach an internal probabilistic fitness model is learned alongside the model of variable interactions; the fitness of many generated offspring is predicted from this model, so only a small subset of individuals require true (costly) function evaluations.  This technique can cut the required evaluations to as little as 1 %–10 % of the original amount, yielding speed‑ups of roughly 2 × to 50 × [1].  \n\nAdditionally, a “competent” mutation operator that searches locally within the sub‑solution neighborhoods identified by the probabilistic model also reduces the number of evaluations needed for convergence, requiring O(k^0.5 log m) fewer evaluations than a traditional select‑recombine operator, where k is the building‑block size and m the number of building blocks[1].",
+        "refused": false,
+        "cited": [
+          1,
+          1
+        ],
+        "cited_as_[n]": true,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q39",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can safety constraints be enforced when control trajectories for a physical system are planned by iterative denoising?",
+        "context_ids": [
+          "2306.15512v1",
+          "2401.05779v4",
+          "2310.12609v4",
+          "2301.06871v1"
+        ],
+        "answer": "Safety constraints are enforced by incorporating control‑barrier functions (CBFs) into the diffusion‑based sampling process. During each denoising step, the sampled trajectory is guided not only toward higher expected reward but also so that it satisfies the CBF‑encoded safety conditions. This CBF‑based guided sampling iteratively adjusts the trajectory as it is denoised, ensuring that every intermediate and final state respects the prescribed safety constraints while still optimizing the task objective【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "Q40",
+        "type": "in_domain",
+        "subtype": null,
+        "question": "How can quantities such as mutual information and estimation-error bounds be estimated from data for wireless systems that share spectrum between sensing and data transmission?",
+        "context_ids": [
+          "2508.02117v1",
+          "2309.08568v2",
+          "2309.08688v1",
+          "2507.05454v2"
+        ],
+        "answer": "Quantities such as mutual information, minimum‑mean‑squared‑error (MMSE) and Bayesian Cramér–Rao bounds can be obtained directly from measured data by learning the underlying score function of the joint sensing‑communication distribution with a score‑based generative model.  In the “scoring ISAC” framework, a neural network is trained to approximate the gradient of the log‑probability density (the score) of the observed signals; once the score is available, analytic relationships between the score and the classical performance metrics are used to compute MI, MMSE and BCRB without requiring any closed‑form statistical model.  This data‑driven approach therefore bypasses the need for tractable analytical expressions in the presence of hardware impairments, multipath, interference and other non‑Gaussian effects, and yields accurate estimates of the information‑theoretic and estimation‑error bounds for spectrum‑shared sensing‑communication systems【1】.",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "cited_as_[n]": false,
+        "cited_as_【n】": true,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O01",
+        "type": "out_domain",
+        "subtype": "off_topic",
+        "question": "What is the boiling point of water at the summit of Mount Everest?",
+        "context_ids": [
+          "2402.09970v2",
+          "2509.22728v2",
+          "2205.10120v7",
+          "2508.10688v2"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O02",
+        "type": "out_domain",
+        "subtype": "off_topic",
+        "question": "Which country won the FIFA World Cup in 2010?",
+        "context_ids": [
+          "2207.12598v1",
+          "2302.00860v3",
+          "2312.01242v1",
+          "2506.10395v2"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O03",
+        "type": "out_domain",
+        "subtype": "off_topic",
+        "question": "How should I prune a tomato plant to get more fruit?",
+        "context_ids": [
+          "2511.09180v1",
+          "2304.07087v1",
+          "2409.10494v1",
+          "1912.05189v2"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O04",
+        "type": "out_domain",
+        "subtype": "off_topic",
+        "question": "What causes the seasons on Earth?",
+        "context_ids": [
+          "2402.19455v2",
+          "2312.01682v1",
+          "2202.02763v3",
+          "2302.00860v3"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O05",
+        "type": "out_domain",
+        "subtype": "off_topic",
+        "question": "What is the difference between a Roth IRA and a traditional IRA?",
+        "context_ids": [
+          "2210.00939v6",
+          "2407.16477v2",
+          "2210.12254v2",
+          "2306.05414v3"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O06",
+        "type": "out_domain",
+        "subtype": "off_topic",
+        "question": "How does TCP congestion control decide when to slow down?",
+        "context_ids": [
+          "2603.03281v2",
+          "2306.15512v1",
+          "2511.09180v1",
+          "2603.08155v3"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O07",
+        "type": "out_domain",
+        "subtype": "near_miss",
+        "question": "How do consistency models enable single-step image generation?",
+        "context_ids": [
+          "2406.01388v3",
+          "2506.06962v3",
+          "2501.13926v2",
+          "2303.02490v2"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O08",
+        "type": "out_domain",
+        "subtype": "near_miss",
+        "question": "How does Fick's second law describe the diffusion of a solute through a liquid?",
+        "context_ids": [
+          "2006.11239v2",
+          "2605.22586v3",
+          "2312.07586v5",
+          "2404.07724v2"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O09",
+        "type": "out_domain",
+        "subtype": "near_miss",
+        "question": "How does the gradient penalty stabilise the training of a Wasserstein GAN?",
+        "context_ids": [
+          "2206.02262v4",
+          "2305.16150v3",
+          "2212.06359v1",
+          "2302.04411v1"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O10",
+        "type": "out_domain",
+        "subtype": "near_miss",
+        "question": "How does bias correction work in the Adam optimizer?",
+        "context_ids": [
+          "2605.28036v1",
+          "2605.27990v1",
+          "2507.05482v3",
+          "2306.14891v2"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O11",
+        "type": "out_domain",
+        "subtype": "near_miss",
+        "question": "What does the Evoformer module do in AlphaFold?",
+        "context_ids": [
+          "2510.12954v2",
+          "2511.09180v1",
+          "2505.02831v5",
+          "2509.22007v2"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      },
+      {
+        "qid": "O12",
+        "type": "out_domain",
+        "subtype": "near_miss",
+        "question": "How can a membership inference attack reveal whether an image was in a diffusion model's training set?",
+        "context_ids": [
+          "2303.09295v1",
+          "2411.16738v2",
+          "2502.12154v1",
+          "2507.05914v3"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "refused": true,
+        "cited": [],
+        "cited_as_[n]": false,
+        "cited_as_【n】": false,
+        "citations_all_1_to_4": true
+      }
+    ]
+  }
+}

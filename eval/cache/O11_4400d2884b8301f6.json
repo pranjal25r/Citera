@@ -1,0 +1,12 @@
+{
+  "qid": "O11",
+  "model": "openai/gpt-oss-120b",
+  "question": "What does the Evoformer module do in AlphaFold?",
+  "context_ids": [
+    "2510.12954v2",
+    "2511.09180v1",
+    "2505.02831v5",
+    "2509.22007v2"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

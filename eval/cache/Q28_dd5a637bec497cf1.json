@@ -1,0 +1,12 @@
+{
+  "qid": "Q28",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can a text prompt be turned into an animatable 3D face by optimising a parametric head model with a 2D image diffusion prior?",
+  "context_ids": [
+    "2307.04859v1",
+    "2401.03221v1",
+    "2305.16223v2",
+    "2508.21032v1"
+  ],
+  "answer": "A text prompt is first fed to a pretrained 2‑D text‑to‑image diffusion model to obtain a diffusion prior that captures the visual appearance described by the prompt.  \nThat prior is then used as a supervisory signal while jointly optimizing the parameters of a parametric 3‑D morphable head model (3DMM).  \nSpecifically, the framework updates the 3DMM’s geometry (shape coefficients) and texture (appearance coefficients) so that renders of the evolving 3‑D head match the diffusion‑generated image features at multiple views.  During optimisation the 2‑D diffusion prior and the 3‑D facial features are kept aligned, ensuring that the resulting head maintains both the textual description and a plausible 3‑D structure.  Because the optimisation operates directly on the 3DMM, the final avatar inherits the model’s deformation rig and can be articulated (e.g., posed or animated) using the 3‑DMM’s articulation parameters.  This yields an animatable 3‑D face that faithfully reflects the original text prompt while leveraging the rich visual prior of a 2‑D diffusion model【1】."
+}

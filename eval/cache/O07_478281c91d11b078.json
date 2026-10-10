@@ -1,0 +1,12 @@
+{
+  "qid": "O07",
+  "model": "openai/gpt-oss-120b",
+  "question": "How do consistency models enable single-step image generation?",
+  "context_ids": [
+    "2406.01388v3",
+    "2506.06962v3",
+    "2501.13926v2",
+    "2303.02490v2"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

@@ -1,0 +1,12 @@
+{
+  "qid": "Q26",
+  "model": "openai/gpt-oss-120b",
+  "question": "Reconstruction quality drops at large guidance scales when real photos are edited by inverting a deterministic sampler; how can a training-free negative-prompt approach be improved to reduce the resulting artifacts?",
+  "context_ids": [
+    "2306.05414v3",
+    "2411.18664v1",
+    "2312.07586v5",
+    "2505.09571v1"
+  ],
+  "answer": "The training‑free negative‑prompt inversion (NPI) can be made more reliable by adding two complementary enhancements:\n\n1. **Regularization of the negative‑prompt embeddings** – introduce a regularization term that keeps the optimized null embeddings close to their original values while still allowing them to correct the DDIM trajectory. This curbs the drift that normally produces artifacts at high classifier‑free guidance (CFG) scales.\n\n2. **Reconstruction‑guided refinement** – incorporate an explicit reconstruction guidance signal (e.g., a loss that penalizes differences between the forward‑generated image and the original photo) during the inversion. This guides the inverted path back toward the true image manifold, further suppressing the artifacts introduced by the plain NPI solution.\n\nBy combining the regularization term with reconstruction guidance, the negative‑prompt approach retains its training‑free, closed‑form nature while delivering cleaner, higher‑quality reconstructions even at large guidance scales【1】."
+}

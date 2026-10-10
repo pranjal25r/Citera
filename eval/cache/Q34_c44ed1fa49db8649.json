@@ -1,0 +1,12 @@
+{
+  "qid": "Q34",
+  "model": "openai/gpt-oss-120b",
+  "question": "What happens to long-range stability when sequential dependence between latent variables is removed from a variational language model with a Gaussian-process prior?",
+  "context_ids": [
+    "2512.24102v1",
+    "2108.06084v4",
+    "2304.04746v1",
+    "2601.21868v2"
+  ],
+  "answer": "Removing the autoregressive dependence between latent variables degrades the latent structure and makes long‑range behavior unstable; the model exhibits unstable long‑range dynamics when the latent variables are independent【1】."
+}

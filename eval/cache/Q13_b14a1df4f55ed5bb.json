@@ -1,0 +1,12 @@
+{
+  "qid": "Q13",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can a model that generates sung vocals be trained when most of the available audio has no aligned lyrics or pitch annotations?",
+  "context_ids": [
+    "2406.05965v1",
+    "2304.09116v3",
+    "2308.14319v1",
+    "2404.01709v1"
+  ],
+  "answer": "The model can be trained in a semi‑supervised way that does not require fully aligned text‑pitch‑audio triples.  MakeSinger learns from any speech or singing recordings regardless of whether they have lyrics or pitch labels by using classifier‑free diffusion guidance and a dual‑guidance mechanism that estimates the score of masked inputs during the reverse diffusion step.  This lets the model exploit large amounts of unlabeled audio and, when combined with a small set of labeled data (or even just TTS data), still produce high‑quality sung vocals without needing full alignment information for every training example【1】."
+}

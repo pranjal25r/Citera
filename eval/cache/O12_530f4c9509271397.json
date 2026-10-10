@@ -1,0 +1,12 @@
+{
+  "qid": "O12",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can a membership inference attack reveal whether an image was in a diffusion model's training set?",
+  "context_ids": [
+    "2303.09295v1",
+    "2411.16738v2",
+    "2502.12154v1",
+    "2507.05914v3"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

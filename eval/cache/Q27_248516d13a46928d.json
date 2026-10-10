@@ -1,0 +1,12 @@
+{
+  "qid": "Q27",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can several diffusion models be combined at test time so that a generated image correctly binds attributes to objects and respects the relations in a complex prompt?",
+  "context_ids": [
+    "2206.01714v6",
+    "2504.16080v1",
+    "2303.09295v1",
+    "2402.13144v3"
+  ],
+  "answer": "The method composes multiple diffusion models by treating each model as an energy‑based component that defines its own data distribution.  \nAt test time the individual energy functions are added together, effectively merging the corresponding diffusion processes into a single joint diffusion that samples from the combined energy. Because each sub‑model is responsible for a specific visual component (e.g., an object, an attribute, or a relational constraint), the joint diffusion simultaneously satisfies all of them, which forces the generated image to bind the right attributes to the right objects and to honor the specified relations in the prompt. This composable‑diffusion approach enables the generation of scenes that are far more complex than any single model could produce while preserving correct attribute–object binding and relational structure【1】."
+}

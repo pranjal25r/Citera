@@ -1,0 +1,12 @@
+{
+  "qid": "Q18",
+  "model": "openai/gpt-oss-120b",
+  "question": "Which exact mathematical results have been derived for the generalized deterministic implicit sampler and for exponential-integrator solvers?",
+  "context_ids": [
+    "2408.07285v1",
+    "2504.18130v3",
+    "2605.06831v2",
+    "1706.09163v1"
+  ],
+  "answer": "The note derives two exact analytical formulas for the generalized deterministic implicit sampler (gDDIM) and also provides precise results for exponential‑integrator (EI) solvers:\n\n* **Generalized deterministic implicit sampler (gDDIM)** – an exact closed‑form expression for the reverse trajectory of the probability‑flow ODE and an exact formula for the covariance matrix of the gDDIM transition kernel are derived [1].\n\n* **Exponential‑integrator (EI) solvers** – an exact characterization of the EI scheme’s efficiency is obtained by analysing the change‑of‑variables that underlies the integrator, giving a precise mathematical understanding of why the EI method is effective [1]."
+}

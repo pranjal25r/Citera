@@ -1,0 +1,12 @@
+{
+  "qid": "Q25",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can a diffusion-based method remove blur from images when no matched sharp and blurry training pairs exist for the target domain?",
+  "context_ids": [
+    "2502.01522v2",
+    "2104.05358v1",
+    "2503.08434v5",
+    "2312.02156v2"
+  ],
+  "answer": "A diffusion‑based method can still deblur images without any matched sharp‑blur pairs for the target domain by **decoupling the extraction of structural information from the blur patterns and training on unpaired data**.  \n\nIn UID‑Diff, two separate Q‑Former modules are trained: one to capture the image’s structural features and another to capture blur characteristics. The model is jointly optimized on three tasks:  \n\n1. **Supervised deblurring on synthetic paired data** – provides a basic deblurring capability.  \n2. **Unsupervised blur‑transfer using unpaired blurred images from the target domain** – the blur‑pattern extractor learns to model the unknown blur distribution directly from the target’s unpaired blurry images.  \n3. **A reconstruction task** that forces the structural and blur features to be complementary, ensuring that the structural branch retains scene content while the blur branch captures the degradation.  \n\nBy learning these disentangled representations, the diffusion process can “undo” the blur learned from the target domain even though no sharp–blur pairs are available for that domain, improving generalisation to unseen blur patterns【1】."
+}

@@ -1,0 +1,12 @@
+{
+  "qid": "Q03",
+  "model": "openai/gpt-oss-120b",
+  "question": "When the conditional distribution has several modes, what successive phases does guided sampling go through, and why does stronger guidance reduce diversity?",
+  "context_ids": [
+    "2509.22007v2",
+    "2505.21101v1",
+    "2511.05844v3",
+    "2605.28036v1"
+  ],
+  "answer": "When the conditional distribution is multimodal, guided sampling proceeds through three successive phases:\n\n1. **Direction‑Shift stage** – The guidance term pulls the trajectory quickly toward the weighted mean of the modes. This creates an initialization bias and causes the sample norm to grow.  \n2. **Mode‑Separation stage** – The local dynamics are largely neutral, but the bias inherited from the first stage preferentially suppresses weaker modes, so the global diversity of the sample set drops.  \n3. **Concentration stage** – Guidance now amplifies contraction inside each remaining mode, shrinking fine‑grained variability within a mode.\n\nBecause stronger guidance intensifies each of these effects—pushing more aggressively toward the mean, more strongly suppressing minor modes, and tightening the spread within the surviving modes—it inevitably reduces both global diversity (fewer modes represented) and intra‑mode diversity (less fine‑grained variation)【1】."
+}

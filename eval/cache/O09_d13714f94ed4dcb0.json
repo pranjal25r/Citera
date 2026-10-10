@@ -1,0 +1,12 @@
+{
+  "qid": "O09",
+  "model": "openai/gpt-oss-120b",
+  "question": "How does the gradient penalty stabilise the training of a Wasserstein GAN?",
+  "context_ids": [
+    "2206.02262v4",
+    "2305.16150v3",
+    "2212.06359v1",
+    "2302.04411v1"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

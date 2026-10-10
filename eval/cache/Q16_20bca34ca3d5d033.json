@@ -1,0 +1,12 @@
+{
+  "qid": "Q16",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can the discrete-step probabilistic formulation, score-based SDEs, deterministic implicit samplers and flow matching all be explained within one differential-equation picture?",
+  "context_ids": [
+    "2605.22586v3",
+    "2504.18130v3",
+    "2212.03325v1",
+    "2208.05003v1"
+  ],
+  "answer": "All of these generative‑sampling schemes can be viewed as different ways of representing the same underlying differential‑equation dynamics that connect a simple prior distribution (e.g., Gaussian noise) to the data distribution.  \n\nStarting from a conditional Gaussian noising process, one can write the forward evolution as either an ordinary differential equation (ODE) or a stochastic differential equation (SDE).  The marginal forward dynamics give the distribution of the noisy data at any time t.  Reversing time yields a **reverse‑time SDE** whose drift involves the *score* ∇ log pₜ (the gradient of the log‑density of the noisy data).  By eliminating the stochastic term one obtains the **probability‑flow ODE**, which has the same marginal trajectories as the reverse SDE but is deterministic.  \n\n- **Score‑based SDEs** correspond to sampling with the reverse‑time SDE, using an estimated score function.  \n- **Deterministic implicit samplers** (e.g., DDIM, probability‑flow ODE solvers) are instances of the probability‑flow ODE, producing smooth, noise‑free trajectories.  \n- **Flow‑matching** methods directly parameterize a time‑dependent vector field that matches the forward and backward flows, which is mathematically equivalent to specifying the drift of the same ODE/SDE.  \n- The **discrete‑step probabilistic formulation** (e.g., DDPM) discretizes the reverse‑time SDE into a sequence of conditional Gaussian transitions, which is just a numerical scheme for solving the same continuous‑time reverse dynamics.\n\nThus, ODE and SDE formulations provide a single differential‑equation picture that unifies discrete probabilistic steps, score‑based SDE sampling, deterministic implicit samplers, and flow‑matching approaches【1】."
+}

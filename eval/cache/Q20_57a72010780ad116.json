@@ -1,0 +1,12 @@
+{
+  "qid": "Q20",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can the spatial resolution of metabolic imaging of brain tumour patients be increased with a shortened diffusion chain?",
+  "context_ids": [
+    "2410.19288v1",
+    "2411.17203v1",
+    "2410.11511v1",
+    "2510.17851v1"
+  ],
+  "answer": "The spatial resolution can be increased by using a **Flow‑based Truncated Denoising Diffusion Model (FTDDM)**. FTDDM shortens the diffusion chain by truncating the diffusion process and estimating the missing steps with a normal‑izing‑flow network. Because the diffusion steps are reduced, sampling is much faster, yet the model still learns to generate high‑resolution metabolic images from low‑resolution inputs, delivering sharper, more accurate super‑resolved MRSI of brain‑tumour patients【1】."
+}

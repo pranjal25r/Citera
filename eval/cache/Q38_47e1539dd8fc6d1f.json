@@ -1,0 +1,12 @@
+{
+  "qid": "Q38",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can evolutionary optimisers that learn a probabilistic model of good solutions cut down on expensive fitness evaluations?",
+  "context_ids": [
+    "0405062v1",
+    "2101.04525v2",
+    "2502.17100v4",
+    "2306.15512v1"
+  ],
+  "answer": "Evolutionary optimisers that build a probabilistic model of promising solutions can dramatically lower the number of expensive fitness evaluations by using the model to *estimate* fitness instead of actually evaluating every offspring.  \nIn the described approach an internal probabilistic fitness model is learned alongside the model of variable interactions; the fitness of many generated offspring is predicted from this model, so only a small subset of individuals require true (costly) function evaluations.  This technique can cut the required evaluations to as little as 1 %–10 % of the original amount, yielding speed‑ups of roughly 2 × to 50 × [1].  \n\nAdditionally, a “competent” mutation operator that searches locally within the sub‑solution neighborhoods identified by the probabilistic model also reduces the number of evaluations needed for convergence, requiring O(k^0.5 log m) fewer evaluations than a traditional select‑recombine operator, where k is the building‑block size and m the number of building blocks[1]."
+}

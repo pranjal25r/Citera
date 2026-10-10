@@ -1,0 +1,12 @@
+{
+  "qid": "Q06",
+  "model": "openai/gpt-oss-120b",
+  "question": "Can noising and then denoising a maliciously perturbed histopathology image protect a classifier, and how much of the original accuracy is recovered?",
+  "context_ids": [
+    "2301.06871v1",
+    "2403.17377v2",
+    "2111.06399v1",
+    "2411.16738v2"
+  ],
+  "answer": "Yes. Adding noise to a maliciously perturbed histopathology image and then denoising it with a Denoising Diffusion Probabilistic Model can act as a purification step that protects the downstream classifier. In the reported experiments on the PatchCamelyon histopathology dataset, this approach recovered up to **88 % of the original (clean‑image) accuracy**【1】."
+}

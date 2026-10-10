@@ -1,0 +1,12 @@
+{
+  "qid": "Q22",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can an image generator look up reference patches repeatedly as it generates, instead of retrieving whole reference images once at the start?",
+  "context_ids": [
+    "2506.06962v3",
+    "2304.07087v1",
+    "1912.05189v2",
+    "2406.01388v3"
+  ],
+  "answer": "An image generator can perform autoregressive patch‑level retrievals — at each generation step it uses the patches it has already produced as queries to fetch the most relevant reference patches, and then blends those retrieved patches into the next output.  By repeatedly looking up and incorporating patch‑wise visual references throughout the decoding process (instead of conditioning once on a fixed whole‑image reference), the model can adapt to the evolving context and avoid over‑copying or stylistic bias.  This approach is the core idea of Autoregressive Retrieval Augmentation (AR‑RAG) [1]."
+}

@@ -1,0 +1,12 @@
+{
+  "qid": "Q21",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can block artefacts be avoided when a learned image codec encodes each patch independently, while still allowing patches to be decoded in parallel?",
+  "context_ids": [
+    "1912.05189v2",
+    "2506.06962v3",
+    "2009.06912v1",
+    "2304.07087v1"
+  ],
+  "answer": "Block artefacts can be avoided by using a binary‑inpainting‑based decoder that also takes the binarised encodings of the surrounding patches as additional input.  In this scheme each patch is still encoded and decoded independently (so decoding can be done in parallel), but during reconstruction the decoder incorporates the binary codes of its neighbours to restore inter‑patch dependencies and thus suppress block artefacts【1】."
+}

@@ -1,0 +1,12 @@
+{
+  "qid": "Q39",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can safety constraints be enforced when control trajectories for a physical system are planned by iterative denoising?",
+  "context_ids": [
+    "2306.15512v1",
+    "2401.05779v4",
+    "2310.12609v4",
+    "2301.06871v1"
+  ],
+  "answer": "Safety constraints are enforced by incorporating control‑barrier functions (CBFs) into the diffusion‑based sampling process. During each denoising step, the sampled trajectory is guided not only toward higher expected reward but also so that it satisfies the CBF‑encoded safety conditions. This CBF‑based guided sampling iteratively adjusts the trajectory as it is denoised, ensuring that every intermediate and final state respects the prescribed safety constraints while still optimizing the task objective【1】."
+}

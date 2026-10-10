@@ -1,0 +1,12 @@
+{
+  "qid": "O10",
+  "model": "openai/gpt-oss-120b",
+  "question": "How does bias correction work in the Adam optimizer?",
+  "context_ids": [
+    "2605.28036v1",
+    "2605.27990v1",
+    "2507.05482v3",
+    "2306.14891v2"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

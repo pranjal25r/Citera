@@ -1,0 +1,12 @@
+{
+  "qid": "Q23",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can linear dimensionality reduction for images be redesigned to keep what people perceive as image quality, instead of minimising pixel-by-pixel error?",
+  "context_ids": [
+    "1908.09288v1",
+    "1910.06072v5",
+    "2009.06912v1",
+    "2501.01423v3"
+  ],
+  "answer": "Redesign linear dimensionality‑reduction for images by replacing the usual pixel‑wise error (e.g., MSE or an ℓ₂ norm) with a perceptual similarity measure that reflects how humans judge image quality.  \nFor example, the Locally Linear Image Structural Embedding (LLISE) method builds a manifold using the Structural Similarity Index (SSIM) instead of MSE, so the embedding preserves the structural features that humans perceive rather than minimizing pixel‑by‑pixel differences【1】.  \n\nThus, a perceptually‑guided reduction can be achieved by (1) defining the local linear reconstruction cost with SSIM (or other perceptual metrics) and (2) learning the embedding that best maintains those similarity scores, thereby keeping the perceived image quality while reducing dimensionality."
+}

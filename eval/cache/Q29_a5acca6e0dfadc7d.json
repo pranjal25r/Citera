@@ -1,0 +1,12 @@
+{
+  "qid": "Q29",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can people's judgments of generated images be turned into tokens that help remove harmful or copyrighted concepts from an image generator?",
+  "context_ids": [
+    "2407.21032v1",
+    "2411.05706v1",
+    "2404.06666v3",
+    "2412.20800v1"
+  ],
+  "answer": "The approach described in the paper “Safeguard Text‑to‑Image Diffusion Models with Human Feedback Inversion” shows how to turn people’s judgments into tokens that can be used to eliminate unwanted concepts.  After a model generates an image, human reviewers evaluate whether the image contains harmful or copyrighted material.  Their feedback is then **condensed into short textual tokens** (e.g., words or phrases that capture the objectionable concept).  These tokens are fed back into the diffusion model as guidance signals during training or inference, directing the model to suppress or remove the flagged concept.  By incorporating the human‑derived tokens through a self‑distillation‑based objective, the generator learns to avoid producing images that trigger the same negative judgments while preserving overall image quality【1】."
+}

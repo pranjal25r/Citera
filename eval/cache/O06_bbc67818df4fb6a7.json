@@ -1,0 +1,12 @@
+{
+  "qid": "O06",
+  "model": "openai/gpt-oss-120b",
+  "question": "How does TCP congestion control decide when to slow down?",
+  "context_ids": [
+    "2603.03281v2",
+    "2306.15512v1",
+    "2511.09180v1",
+    "2603.08155v3"
+  ],
+  "answer": "I don't have enough information to answer that."
+}

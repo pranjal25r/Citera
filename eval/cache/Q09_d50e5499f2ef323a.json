@@ -1,0 +1,12 @@
+{
+  "qid": "Q09",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can a generative model that learns gradients of log-densities be used to test whether two variables are independent given a third, while controlling the false-positive rate?",
+  "context_ids": [
+    "2505.23309v1",
+    "2203.04698v1",
+    "2211.01364v3",
+    "2311.09952v1"
+  ],
+  "answer": "A score‑based generative model learns an approximation of the gradient of the log‑density (the “score”) of a conditional distribution.  By first estimating the conditional score with a sliced conditional‑score‑matching procedure, one can run conditional Langevin dynamics to draw samples that follow the null‑hypothesis distribution \\(P_{X\\mid Z}\\) (and similarly for \\(Y\\mid Z\\)).  These synthetic samples represent what would be observed if \\(X\\) and \\(Y\\) were conditionally independent given \\(Z\\).  A goodness‑of‑fit test is then applied to compare the real joint data to the generated null data; because the samples are produced from the estimated conditional score, the test inherits precise Type‑I error (false‑positive) control.  In this way, the gradient‑based generative model provides a way to test conditional independence while accurately controlling the false‑positive rate【1】."
+}

@@ -1,0 +1,12 @@
+{
+  "qid": "Q30",
+  "model": "openai/gpt-oss-120b",
+  "question": "How can the number of points or strokes in generated free-hand drawings be controlled explicitly?",
+  "context_ids": [
+    "2306.09274v1",
+    "2304.03373v2",
+    "2504.20754v1",
+    "2503.21943v2"
+  ],
+  "answer": "The method introduces two explicit control mechanisms — **state embeddings** and a **stroke token** — that are fed into a transformer‑based latent diffusion model. By providing the model with the desired number of points (via state embeddings) or the desired number of strokes (via the stroke token), the synthesis process can be guided to produce free‑hand sketches with exactly the specified amount of point‑level or stroke‑level detail [1]."
+}
